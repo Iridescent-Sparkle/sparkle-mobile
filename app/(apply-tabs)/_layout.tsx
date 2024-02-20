@@ -27,9 +27,9 @@ export default function TabLayout() {
         headerShown: useClientOnlyValue(false, true),
       }}>
       <Tabs.Screen
-        name="index"
+        name="apply-home"
         options={{
-          title: 'Tab One',
+          title: '首页',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
@@ -48,9 +48,23 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="apply-manage"
         options={{
-          title: 'Tab Two',
+          title: '投递',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="apply-chat"
+        options={{
+          title: '聊天',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="apply-member"
+        options={{
+          title: '我的',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
