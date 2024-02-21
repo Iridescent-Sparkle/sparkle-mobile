@@ -27,7 +27,7 @@ export default function TabLayout() {
         headerShown: useClientOnlyValue(false, true),
       }}>
       <Tabs.Screen
-        name="apply-home"
+        name="index"
         options={{
           title: '首页',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
@@ -48,21 +48,21 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="apply-manage"
+        name="manage"
         options={{
           title: '投递',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="apply-chat"
+        name="chat"
         options={{
           title: '聊天',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="apply-member"
+        name="member"
         options={{
           title: '我的',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,

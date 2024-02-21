@@ -27,7 +27,7 @@ export default function TabLayout() {
         headerShown: useClientOnlyValue(false, true),
       }}>
       <Tabs.Screen
-        name="invite-home"
+        name="index"
         options={{
           title: '首页',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
@@ -48,28 +48,28 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="invite-collect"
+        name="collect"
         options={{
           title: '收藏',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="invite-deliver"
+        name="deliver"
         options={{
           title: '投递',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="invite-chat"
+        name="chat"
         options={{
           title: '聊天',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="invite-resume"
+        name="resume"
         options={{
           title: '我的',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
