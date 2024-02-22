@@ -6,6 +6,7 @@ import { Pressable } from 'react-native';
 import Colors from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
+import { AntDesign, Entypo, Feather } from '@expo/vector-icons';
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 function TabBarIcon(props: {
@@ -30,7 +31,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: '首页',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <FontAwesome name="list-alt" size={24} color="black" />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -50,22 +51,22 @@ export default function TabLayout() {
       <Tabs.Screen
         name="manage"
         options={{
-          title: '投递',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: '管理招聘',
+          tabBarIcon: ({ color }) => <Feather name="box" size={24} color="black" />,
         }}
       />
       <Tabs.Screen
         name="chat"
         options={{
           title: '聊天',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <Entypo name="chat" size={24} color="black" />,
         }}
       />
       <Tabs.Screen
         name="member"
         options={{
           title: '我的',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="user" size={24} color="black" />,
         }}
       />
     </Tabs>
