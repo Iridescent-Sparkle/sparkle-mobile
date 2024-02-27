@@ -1,23 +1,25 @@
 import useClick from '@/core/hooks/useClick'
 import React from 'react'
-import { Pressable, PressableProps } from 'react-native'
+import { TouchableOpacity, TouchableOpacityProps } from 'react-native'
 
-/** 可点击的容器，支持节流 */
-type Props = PressableProps & {
-  ref?: any,
+/** 可点击的容器，支持防抖节流 */
+type Props = TouchableOpacityProps & {
   /** 节流时间间隔 */
   throttle?: number
-  /** onPress事件 */
-  onPress?: () => any
-  /** 当前按钮埋点名 */
+  /** 用于埋点的 btnName */
   btnName?: string
+  /** 点击事件回调 */
+  onPress?: () => void | null
 }
-export default React.forwardRef((props: Props, ref) => {
-  const { throttle = 500, onPress = () => { }, btnName, ...viewProps } = props
+
+const TouchView = React.forwardRef((props: Props, ref) => {
+  const { throttle = 500, btnName, onPress, ...viewProps } = props
 
   const handlePressFn = useClick(() => {
-    onPress()
+    onPress && onPress()
   }, throttle)
 
-  return <Pressable ref={ref} {...viewProps} onPress={handlePressFn} />
+  return <TouchableOpacity {...viewProps} onPress={handlePressFn} />
 })
+
+export default TouchView
