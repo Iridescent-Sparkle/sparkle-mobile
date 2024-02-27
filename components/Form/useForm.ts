@@ -1,8 +1,3 @@
-/*
- * @Date: 2022-06-16 15:29:41
- * @Description: useForm
- */
-
 import { useEffect, useState } from 'react'
 import type { FormInstance } from './core'
 import createFormStore from './core'

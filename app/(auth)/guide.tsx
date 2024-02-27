@@ -41,7 +41,7 @@ const styles = create({
     paddingHorizontal: 60,
   },
   banner: {
-    width: 640,
+    width: 630,
     height: 540,
   },
   titleWrapper: {

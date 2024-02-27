@@ -1,8 +1,3 @@
-/*
- * @Date: 2022-06-16 14:01:00
- * @Description: core
- */
-
 /** 深拷贝，不能处理日期和函数 */
 function deepClone<T>(any: T): T {
   if (any === null)

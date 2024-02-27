@@ -1,11 +1,3 @@
-/**
- * @Date 2022-06-16 14:36:16
- * @Name Form表单item
- * @Description 用于展示带label标签的表单项
- * @Preview https://cdn.yupaowang.com/yupao_app/component-selectcity.jpg
- * @HideDoc true
- */
-
 import { cloneElement, useContext, useEffect, useState } from 'react'
 import Context from './context'
 

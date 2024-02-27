@@ -1,8 +1,3 @@
-/*
- * @Date: 2022-06-30 10:21:48
- * @Description: form 表单值改变就会触发
- */
-
 import { useEffect, useState } from 'react'
 import type { FormInstance } from './core'
 

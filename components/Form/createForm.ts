@@ -1,8 +1,3 @@
-/*
- * @Date: 2022-07-01 09:27:17
- * @Description: createInstance class 组件使用 可以设置指定字段更新时触发渲染
- */
-
 import createFormStore from './core'
 
 export type CreateForm<T = any> = typeof createForm<T>

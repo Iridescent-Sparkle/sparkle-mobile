@@ -1,9 +1,3 @@
-/**
- * @Date 2022-06-16 13:45:58
- * @Name 表单组件
- * @Description 用于包裹输入框、选择器等内部组件
- */
-
 import type { ForwardRefExoticComponent } from 'react'
 import React, { forwardRef, useImperativeHandle } from 'react'
 import Context from './context'
