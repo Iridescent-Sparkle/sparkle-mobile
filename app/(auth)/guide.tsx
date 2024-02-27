@@ -1,11 +1,22 @@
 import React from 'react'
 import { Image } from 'react-native'
+import { useRouter } from 'expo-router'
 import Button from '@/components/Button'
 import { Text, View } from '@/components/Themed'
 import { IMAGE_PREFIX } from '@/constants'
 import { create } from '@/core/styleSheet'
 
-function guide() {
+function Guide() {
+  const router = useRouter()
+
+  const handleRegisterClick = () => {
+    router.replace('/(auth)/register')
+  }
+
+  const handleLoginClick = () => {
+    router.replace('/(auth)/login')
+  }
+
   return (
     <View style={styles.container}>
       <Image style={styles.banner} src={`${IMAGE_PREFIX}/mobile_login.png`}></Image>
@@ -16,8 +27,8 @@ function guide() {
         </Text>
       </View>
       <View style={styles.buttonWrapper}>
-        <Button title="注册" style={styles.button}></Button>
-        <Button title="登录" style={styles.button}></Button>
+        <Button title="注册" style={styles.button} onPress={handleRegisterClick}></Button>
+        <Button title="登录" style={styles.button} onPress={handleLoginClick}></Button>
       </View>
     </View>
   )
@@ -54,4 +65,4 @@ const styles = create({
   },
 })
 
-export default guide
+export default Guide

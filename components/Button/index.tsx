@@ -2,7 +2,7 @@ import React from 'react'
 import type { StyleProp, TextStyle, ViewStyle } from 'react-native'
 import { ActivityIndicator, Text, View } from 'react-native'
 import Visible from '../Visible'
-import TouchView from '../PressView'
+import TouchView from '../TouchView'
 import { c, create, pxToDp } from '@/core/styleSheet'
 
 interface Props {

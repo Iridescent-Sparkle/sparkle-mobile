@@ -1,11 +1,15 @@
 import React from 'react'
+import { Image } from 'react-native'
+import { View } from '@/components/Themed'
 
 interface Props {}
 
-function login(props: Props) {
+function Login(props: Props) {
   return (
-    <div>login</div>
+    <View>
+      <Image></Image>
+    </View>
   )
 }
 
-export default login
+export default Login
