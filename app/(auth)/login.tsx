@@ -5,12 +5,13 @@ import { useRouter } from 'expo-router'
 import { Text, View } from '@/components/Themed'
 import { IMAGE_PREFIX } from '@/constants'
 import { create } from '@/core/styleSheet'
+import Button from '@/components/Button'
 import Form from '@/components/Form'
 import Input from '@/components/Form/components/Input'
-import Button from '@/components/Button'
 
 function Login() {
   const router = useRouter()
+  const form = Form.useForm()
   const [showPassword, setShowPassword] = useState(false)
 
   const handleRegisterClick = () => {
@@ -24,14 +25,15 @@ function Login() {
   const handleHiddenPassword = () => {
     setShowPassword(false)
   }
-  const onPasswordChange = (value: string) => {
+
+  const onPasswordChange = (value: any) => {
     console.log(value)
   }
   return (
     <View style={styles.container}>
       <Image style={styles.logo} src={`${IMAGE_PREFIX}/stars.png`}></Image>
       <Text style={styles.title}>请登录</Text>
-      <Form>
+      <Form form={form}>
         <View style={styles.formItem}>
           <Feather name="phone" size={24} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="phoneNumber">
@@ -41,8 +43,8 @@ function Login() {
         </View>
         <View style={styles.formItem}>
           <Feather name="lock" size={24} color="#A9A9A9" style={styles.icon} />
-          <Form.Item name="password" onChange={onPasswordChange}>
-            <Input style={styles.input}></Input>
+          <Form.Item name="password">
+            <Input style={styles.input} onChange={onPasswordChange}></Input>
           </Form.Item>
           {showPassword
             ? <Feather name="eye-off" size={24} color="#A9A9A9" onPress={handleHiddenPassword} />
