@@ -22,8 +22,6 @@ interface Props {
   children?: React.ReactNode
   /** 是否禁用 */
   disable?: boolean
-  /** 用于埋点的 btnName */
-  btnName?: string
 }
 
 const styles = create({
@@ -31,7 +29,7 @@ const styles = create({
     backgroundColor: c.primary,
     borderColor: c.primary,
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 12,
     height: 80,
     display: 'flex',
     justifyContent: 'center',
@@ -41,7 +39,7 @@ const styles = create({
     backgroundColor: '#fff',
     borderColor: c.primary,
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 12,
     height: 80,
     display: 'flex',
     justifyContent: 'center',
@@ -51,7 +49,7 @@ const styles = create({
     backgroundColor: c.white,
     borderColor: c.white,
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 12,
     height: 80,
     display: 'flex',
     justifyContent: 'center',
@@ -60,7 +58,7 @@ const styles = create({
   empty: {
     borderColor: c.primary,
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 12,
     height: 80,
     display: 'flex',
     justifyContent: 'center',

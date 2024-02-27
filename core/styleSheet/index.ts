@@ -11,15 +11,14 @@ export function create<T extends NamedStyles<T> | NamedStyles<any>>(styles: T | 
 }
 
 /** 循环样式最外面的 class */
-function forStyles(styles:any) {
+function forStyles(styles: any) {
   for (const key in styles) {
     if (Object.prototype.hasOwnProperty.call(styles, key)) {
       const classStyles = styles[key]
       styles[key] = rpxStyles(classStyles)
       /** 修复部分Android机型上的文字兼容性问题 */
-      if ((styles[key].fontSize || styles[key].fontWeight) && Platform.OS == 'android') {
+      if ((styles[key].fontSize || styles[key].fontWeight) && Platform.OS == 'android')
         styles[key].fontFamily = 'System'
-      }
     }
   }
   return styles
@@ -47,9 +46,8 @@ function rpxStyles(styles: { [x: string]: number }) {
     if (Object.prototype.hasOwnProperty.call(styles, key)) {
       const value = styles[key]
       if (typeof value === 'number') {
-        if (filterKeys.indexOf(key) === -1) {
+        if (!filterKeys.includes(key))
           styles[key] = pxToDp(value)
-        }
       }
     }
   }

@@ -11,8 +11,7 @@ type Props = TouchableOpacityProps & {
   onPress?: () => void | null
 }
 
-// eslint-disable-next-line react/display-name
-const TouchView = React.forwardRef((props: Props) => {
+function TouchView(props: Props) {
   const { throttle = 500, onPress, ...viewProps } = props
 
   const handlePressFn = useClick(() => {
@@ -20,6 +19,6 @@ const TouchView = React.forwardRef((props: Props) => {
   }, throttle)
 
   return <TouchableOpacity {...viewProps} onPress={handlePressFn} />
-})
+}
 
 export default TouchView
