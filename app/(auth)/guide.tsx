@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
+interface Props {}
 
-const guide = (props: Props) => {
+function guide(props: Props) {
   return (
     <div>guide</div>
   )

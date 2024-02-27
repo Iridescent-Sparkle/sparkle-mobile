@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
+interface Props {}
 
-const login = (props: Props) => {
+function login(props: Props) {
   return (
     <div>login</div>
   )

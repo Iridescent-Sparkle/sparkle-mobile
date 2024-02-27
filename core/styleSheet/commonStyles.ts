@@ -8,7 +8,7 @@ export const styles = {
 
     }
   },
-  margin(a, b?, c?, d?): TypeStyle {
+  margin(a: any, b?: any, c?: any, d?: any): TypeStyle {
     if (arguments.length === 1) {
       return {
         marginTop: a,
@@ -40,7 +40,7 @@ export const styles = {
       marginLeft: d,
     }
   },
-  padding(a, b?, c?, d?): TypeStyle {
+  padding(a: any, b?: any, c?: any, d?: any): TypeStyle {
     if (arguments.length === 1) {
       return {
         paddingTop: a,

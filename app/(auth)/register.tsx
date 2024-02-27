@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
+interface Props {}
 
-const register = (props: Props) => {
+function register(props: Props) {
   return (
     <div>register</div>
   )

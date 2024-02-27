@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 
 function useClick<T>(fn: Function, time = 500) {
-  const promise = useRef<Promise<T>>(null)
+  const promise = useRef<Promise<T>>()
 
   return async function (...args: any) {
     if (promise.current) {
@@ -15,7 +15,7 @@ function useClick<T>(fn: Function, time = 500) {
         reject(e)
       } finally {
         setTimeout(() => {
-          promise.current = null
+          promise.current = undefined
         }, time)
       }
     })

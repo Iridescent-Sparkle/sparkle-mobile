@@ -1,10 +1,11 @@
 import React from 'react'
-import { ActivityIndicator, StyleProp, Text, TextStyle, View, ViewStyle } from 'react-native'
-import { c, create, pxToDp } from '@/core/styleSheet'
+import type { StyleProp, TextStyle, ViewStyle } from 'react-native'
+import { ActivityIndicator, Text, View } from 'react-native'
 import Visible from '../Visible'
 import TouchView from '../PressView'
+import { c, create, pxToDp } from '@/core/styleSheet'
 
-type Props = {
+interface Props {
   /** 标题 */
   title?: string
   /** 点击事件 */
@@ -92,7 +93,7 @@ const styles = create({
   },
 })
 
-const Index = (props: Props) => {
+function Button(props: Props) {
   const {
     title,
     onPress,
@@ -102,14 +103,12 @@ const Index = (props: Props) => {
     textStyle,
     children,
     disable = false,
-    btnName,
   } = props
 
   /** 点击事件统一处理 */
   const onPressFn = () => {
-    if (onPress) {
+    if (onPress)
       onPress()
-    }
   }
   if (disable) {
     return (
@@ -118,29 +117,33 @@ const Index = (props: Props) => {
           <ActivityIndicator color="#fff" size={pxToDp(48)} />
         </Visible>
         <Visible visible={!loading}>
-          {children ? (
-            <View style={styles.childrenWrap}>{children}</View>
-          ) : (
-            <Text style={[styles[`text${type}`], textStyle]}>{title}</Text>
-          )}
+          {children
+            ? (
+              <View style={styles.childrenWrap}>{children}</View>
+              )
+            : (
+              <Text style={[styles[`text${type}`], textStyle]}>{title}</Text>
+              )}
         </Visible>
       </View>
     )
   }
   return (
-    <TouchView onPress={loading ? undefined : onPressFn} style={[styles[type], style]} activeOpacity={0.7} btnName={btnName}>
+    <TouchView onPress={loading ? undefined : onPressFn} style={[styles[type], style]} activeOpacity={0.7}>
       <Visible visible={loading}>
         <ActivityIndicator color="#fff" size={pxToDp(48)} />
       </Visible>
       <Visible visible={!loading}>
-        {children ? (
-          <View style={styles.childrenWrap}>{children}</View>
-        ) : (
-          <Text style={[styles[`text${type}`], textStyle]}>{title}</Text>
-        )}
+        {children
+          ? (
+            <View style={styles.childrenWrap}>{children}</View>
+            )
+          : (
+            <Text style={[styles[`text${type}`], textStyle]}>{title}</Text>
+            )}
       </Visible>
     </TouchView>
   )
 }
 
-export default Index
+export default Button

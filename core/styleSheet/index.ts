@@ -11,7 +11,7 @@ export function create<T extends NamedStyles<T> | NamedStyles<any>>(styles: T | 
 }
 
 /** 循环样式最外面的 class */
-function forStyles(styles) {
+function forStyles(styles:any) {
   for (const key in styles) {
     if (Object.prototype.hasOwnProperty.call(styles, key)) {
       const classStyles = styles[key]
@@ -31,7 +31,7 @@ export const windowSize = Dimensions.get('window')
 // UI 默认给图是 750
 const uiWidthPx = 750
 
-export function pxToDp(uiElementPx) {
+export function pxToDp(uiElementPx: number) {
   return (uiElementPx * windowSize.width) / uiWidthPx
 }
 
@@ -42,7 +42,7 @@ export const allowFontScaling = Platform.OS != 'ios'
 const filterKeys = ['opacity', 'flex', 'zIndex']
 
 /** 循环样式 */
-function rpxStyles(styles) {
+function rpxStyles(styles: { [x: string]: number }) {
   for (const key in styles) {
     if (Object.prototype.hasOwnProperty.call(styles, key)) {
       const value = styles[key]
