@@ -29,6 +29,7 @@ function Login() {
   const onPasswordChange = (value: any) => {
     console.log(value)
   }
+
   return (
     <View style={styles.container}>
       <Image style={styles.logo} src={`${IMAGE_PREFIX}/stars.png`}></Image>
