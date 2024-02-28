@@ -5,6 +5,7 @@ import { Stack, router, useNavigation } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
 import { useEffect } from 'react'
 
+import { Provider } from '@fruits-chain/react-native-xiaoshu'
 import { useColorScheme } from '@/components/useColorScheme'
 
 export {
@@ -49,12 +50,15 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme()
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(auth)/guide" options={{ headerShown: false }} />
-        <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
-        <Stack.Screen name="(auth)/register" options={{ headerShown: false }} />
-      </Stack>
-    </ThemeProvider>
+    <Provider>
+      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <Stack>
+          <Stack.Screen name="(auth)/guide" options={{ headerShown: false }} />
+          <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
+          <Stack.Screen name="(auth)/register" options={{ headerShown: false }} />
+        </Stack>
+      </ThemeProvider>
+    </Provider>
+
   )
 }

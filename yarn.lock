@@ -1213,7 +1213,7 @@
   resolved "https://registry.npmmirror.com/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.18.6", "@babel/runtime@^7.20.0", "@babel/runtime@^7.8.4":
+"@babel/runtime@*", "@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.6", "@babel/runtime@^7.20.0", "@babel/runtime@^7.8.4":
   version "7.23.9"
   resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.23.9.tgz#47791a15e4603bb5f905bc0753801cf21d6345f7"
   integrity sha512-0CX6F+BI2s9dkUqr08KFrAIZgNFj75rdBU/DjCyYLIaV/quFjkk6T+EJ2LkZHyZTbEV4L5p97mNkUsHl2wLFAw==
@@ -1680,6 +1680,33 @@
     chalk "^4.1.0"
     find-up "^5.0.0"
     js-yaml "^4.1.0"
+
+"@fruits-chain/design-tokens-bailu@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.npmmirror.com/@fruits-chain/design-tokens-bailu/-/design-tokens-bailu-0.0.7.tgz#08242570a4c2695d9869a1276989cda371ea8504"
+  integrity sha512-kAWVggw+hCIv6ZajJPZZi/qWlkDNfklLSqp8Xqv1Dgt/psqEDVKRh2KTV0Xw47xrZ/r2EW0LOdorcjrxE1JSYQ==
+
+"@fruits-chain/icons-react-native@^0.1.3":
+  version "0.1.5"
+  resolved "https://registry.npmmirror.com/@fruits-chain/icons-react-native/-/icons-react-native-0.1.5.tgz#154b24d1001583249fc36fe5255065a3efa3911d"
+  integrity sha512-OTGC7NKrztCWSPjNODBptAlQBgGvHh/W0vEb/F3N1D2jZ4D16LLLBLjuB7gOvn4fY5jDgn9uthRq4VaQ3hD8NQ==
+  dependencies:
+    "@babel/runtime" "*"
+    lodash "*"
+
+"@fruits-chain/react-native-xiaoshu@^0.3.19":
+  version "0.3.19"
+  resolved "https://registry.npmmirror.com/@fruits-chain/react-native-xiaoshu/-/react-native-xiaoshu-0.3.19.tgz#b6e9a9b24408d298ac3100d12024d6e81e5c41b7"
+  integrity sha512-n9XTgZ+Uj1wxWQnohsIE9ms4cBqRwy4155lwFOIkKBMmOsnK4lsHs1XSdm2ENQShuy1zU8qfxhQVhTYNdAPDRg==
+  dependencies:
+    "@fruits-chain/design-tokens-bailu" "^0.0.7"
+    "@fruits-chain/icons-react-native" "^0.1.3"
+    color "^3.2.1"
+    fast-deep-equal "^3.1.3"
+    lodash "^4.17.21"
+    react-is "^18.2.0"
+    react-native-popover-view "^5.1.7"
+    rn-placeholder "^3.0.3"
 
 "@gar/promisify@^1.0.1":
   version "1.1.3"
@@ -2389,7 +2416,7 @@
     hermes-parser "0.15.0"
     nullthrows "^1.1.1"
 
-"@react-native/normalize-color@^2.0.0", "@react-native/normalize-color@^2.1.0":
+"@react-native/normalize-color@*", "@react-native/normalize-color@^2.0.0", "@react-native/normalize-color@^2.1.0":
   version "2.1.0"
   resolved "https://registry.npmmirror.com/@react-native/normalize-color/-/normalize-color-2.1.0.tgz#939b87a9849e81687d3640c5efa2a486ac266f91"
   integrity sha512-Z1jQI2NpdFJCVgpY+8Dq/Bt3d+YUi1928Q+/CZm/oh66fzM0RUl54vvuXlPJKybH4pdCZey1eDTPaLHkMPNgWA==
@@ -3224,7 +3251,7 @@ async-limiter@~1.0.0:
   resolved "https://registry.npmmirror.com/async-limiter/-/async-limiter-1.0.1.tgz#dd379e94f0db8310b08291f9d64c3209766617fd"
   integrity sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==
 
-async-validator@^4.2.5:
+async-validator@^4.1.0, async-validator@^4.2.5:
   version "4.2.5"
   resolved "https://registry.npmmirror.com/async-validator/-/async-validator-4.2.5.tgz#c96ea3332a521699d0afaaceed510a54656c6339"
   integrity sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==
@@ -3829,7 +3856,7 @@ collect-v8-coverage@^1.0.0:
   resolved "https://registry.npmmirror.com/collect-v8-coverage/-/collect-v8-coverage-1.0.2.tgz#c0b29bcd33bcd0779a1344c2136051e6afd3d9e9"
   integrity sha512-lHl4d5/ONEbLlJvaJNtsF/Lz+WvB07u2ycqTYbdrq7UypDXailES4valYb2eWiJFxZlVmpGekfqoxQhzyFdT4Q==
 
-color-convert@^1.9.0:
+color-convert@^1.9.0, color-convert@^1.9.3:
   version "1.9.3"
   resolved "https://registry.npmmirror.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
   integrity sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==
@@ -3853,13 +3880,21 @@ color-name@^1.0.0, color-name@~1.1.4:
   resolved "https://registry.npmmirror.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-color-string@^1.9.0:
+color-string@^1.6.0, color-string@^1.9.0:
   version "1.9.1"
   resolved "https://registry.npmmirror.com/color-string/-/color-string-1.9.1.tgz#4467f9146f036f855b764dfb5bf8582bf342c7a4"
   integrity sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==
   dependencies:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
+
+color@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.npmmirror.com/color/-/color-3.2.1.tgz#3544dc198caf4490c3ecc9a790b54fe9ff45e164"
+  integrity sha512-aBl7dZI9ENN6fUGC7mWpMTPNHmWUSNan9tuWN6ahh5ZLNk9baLJOnSMlrQkHcrfFgz2/RigjUVAjdx36VcemKA==
+  dependencies:
+    color-convert "^1.9.3"
+    color-string "^1.6.0"
 
 color@^4.2.3:
   version "4.2.3"
@@ -4062,6 +4097,30 @@ css-in-js-utils@^3.1.0:
   dependencies:
     hyphenate-style-name "^1.0.3"
 
+css-select@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.npmmirror.com/css-select/-/css-select-5.1.0.tgz#b8ebd6554c3637ccc76688804ad3f6a6fdaea8a6"
+  integrity sha512-nwoRF1rvRRnnCqqY7updORDsuqKzqYJ28+oSMaJMMgOauh3fvwHqMS7EZpIPqK8GL+g9mKxF1vP/ZjSeNjEVHg==
+  dependencies:
+    boolbase "^1.0.0"
+    css-what "^6.1.0"
+    domhandler "^5.0.2"
+    domutils "^3.0.1"
+    nth-check "^2.0.1"
+
+css-tree@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.npmmirror.com/css-tree/-/css-tree-1.1.3.tgz#eb4870fb6fd7707327ec95c2ff2ab09b5e8db91d"
+  integrity sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q==
+  dependencies:
+    mdn-data "2.0.14"
+    source-map "^0.6.1"
+
+css-what@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.npmmirror.com/css-what/-/css-what-6.1.0.tgz#fb5effcf76f1ddea2c81bdfaa4de44e79bac70f4"
+  integrity sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==
+
 cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmmirror.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
@@ -4245,6 +4304,15 @@ depd@2.0.0:
   resolved "https://registry.npmmirror.com/depd/-/depd-2.0.0.tgz#b696163cc757560d09cf22cc8fad1571b79e76df"
   integrity sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==
 
+deprecated-react-native-prop-types@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmmirror.com/deprecated-react-native-prop-types/-/deprecated-react-native-prop-types-2.3.0.tgz#c10c6ee75ff2b6de94bb127f142b814e6e08d9ab"
+  integrity sha512-pWD0voFtNYxrVqvBMYf5gq3NA2GCpfodS1yNynTPc93AYA/KEMGeWDqqeUB6R2Z9ZofVhks2aeJXiuQqKNpesA==
+  dependencies:
+    "@react-native/normalize-color" "*"
+    invariant "*"
+    prop-types "*"
+
 deprecated-react-native-prop-types@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmmirror.com/deprecated-react-native-prop-types/-/deprecated-react-native-prop-types-5.0.0.tgz#02a12f090da7bd9e8c3ac53c31cf786a1315d302"
@@ -4295,12 +4363,42 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+dom-serializer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/dom-serializer/-/dom-serializer-2.0.0.tgz#e41b802e1eedf9f6cae183ce5e622d789d7d8e53"
+  integrity sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==
+  dependencies:
+    domelementtype "^2.3.0"
+    domhandler "^5.0.2"
+    entities "^4.2.0"
+
+domelementtype@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmmirror.com/domelementtype/-/domelementtype-2.3.0.tgz#5c45e8e869952626331d7aab326d01daf65d589d"
+  integrity sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==
+
 domexception@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmmirror.com/domexception/-/domexception-4.0.0.tgz#4ad1be56ccadc86fc76d033353999a8037d03673"
   integrity sha512-A2is4PLG+eeSfoTMA95/s4pvAoSo2mKtiM5jlHkAVewmiO8ISFTFKZjH7UAM1Atli/OT/7JHOrJRJiMKUZKYBw==
   dependencies:
     webidl-conversions "^7.0.0"
+
+domhandler@^5.0.2, domhandler@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.npmmirror.com/domhandler/-/domhandler-5.0.3.tgz#cc385f7f751f1d1fc650c21374804254538c7d31"
+  integrity sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==
+  dependencies:
+    domelementtype "^2.3.0"
+
+domutils@^3.0.1:
+  version "3.1.0"
+  resolved "https://registry.npmmirror.com/domutils/-/domutils-3.1.0.tgz#c47f551278d3dc4b0b1ab8cbb42d751a6f0d824e"
+  integrity sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==
+  dependencies:
+    dom-serializer "^2.0.0"
+    domelementtype "^2.3.0"
+    domhandler "^5.0.3"
 
 dotenv-expand@~10.0.0:
   version "10.0.0"
@@ -4344,7 +4442,7 @@ end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-entities@^4.4.0:
+entities@^4.2.0, entities@^4.4.0:
   version "4.5.0"
   resolved "https://registry.npmmirror.com/entities/-/entities-4.5.0.tgz#5d268ea5e7113ec74c4d033b79ea5a35a488fb48"
   integrity sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==
@@ -5862,7 +5960,7 @@ internal-slot@^1.0.5, internal-slot@^1.0.7:
     hasown "^2.0.0"
     side-channel "^1.0.4"
 
-invariant@^2.2.4:
+invariant@*, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.npmmirror.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -7075,7 +7173,7 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.npmmirror.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==
 
-lodash@^4.17.13, lodash@^4.17.19, lodash@^4.17.21, lodash@^4.17.4:
+lodash@*, lodash@^4.17.13, lodash@^4.17.19, lodash@^4.17.21, lodash@^4.17.4:
   version "4.17.21"
   resolved "https://registry.npmmirror.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -7197,6 +7295,11 @@ mdast-util-to-string@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmmirror.com/mdast-util-to-string/-/mdast-util-to-string-2.0.0.tgz#b8cfe6a713e1091cb5b728fc48885a4767f8b97b"
   integrity sha512-AW4DRS3QbBayY/jJmD8437V1Gombjf8RSOUCMFBuo5iHi58AGEgVCKQ+ezHkZZDpAQS75hcBMpLqjpJTjtUL7w==
+
+mdn-data@2.0.14:
+  version "2.0.14"
+  resolved "https://registry.npmmirror.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
+  integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
 memoize-one@^5.0.0:
   version "5.2.1"
@@ -7724,7 +7827,7 @@ npm-run-path@^5.1.0:
   dependencies:
     path-key "^4.0.0"
 
-nth-check@^2.1.1:
+nth-check@^2.0.1, nth-check@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npmmirror.com/nth-check/-/nth-check-2.1.1.tgz#c9eab428effce36cd6b92c924bdb000ef1f1ed1d"
   integrity sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==
@@ -8301,7 +8404,7 @@ prompts@^2.0.1, prompts@^2.2.1, prompts@^2.3.2, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@*, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmmirror.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -8391,6 +8494,23 @@ range-parser@~1.2.1:
   resolved "https://registry.npmmirror.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
+rc-field-form@^1.42.0:
+  version "1.42.0"
+  resolved "https://registry.npmmirror.com/rc-field-form/-/rc-field-form-1.42.0.tgz#80a59b91702465c0e01cf9b5c96c154ff6a783b4"
+  integrity sha512-z7U8J4wivKIRZ60VUhl/v5d4J4jgokcDVvzCFhJAxGjGYjpTUeSlZtEyH+CjiA5es6LgTkNS7P7vy4nsQOPBnQ==
+  dependencies:
+    "@babel/runtime" "^7.18.0"
+    async-validator "^4.1.0"
+    rc-util "^5.32.2"
+
+rc-util@^5.32.2:
+  version "5.38.2"
+  resolved "https://registry.npmmirror.com/rc-util/-/rc-util-5.38.2.tgz#240da546b51ee838e616f7a2e3fcf62c753b0330"
+  integrity sha512-yRGRPKyi84H7NkRSP6FzEIYBdUt4ufdsmXUZ7qM2H5qoByPax70NnGPkfo36N+UKUnUBj2f2Q2eUbwYMuAsIOQ==
+  dependencies:
+    "@babel/runtime" "^7.18.3"
+    react-is "^18.2.0"
+
 rc@~1.2.7:
   version "1.2.8"
   resolved "https://registry.npmmirror.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
@@ -8453,10 +8573,23 @@ react-is@^17.0.1:
   resolved "https://registry.npmmirror.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-native-safe-area-context@4.8.2:
-  version "4.8.2"
-  resolved "https://registry.npmmirror.com/react-native-safe-area-context/-/react-native-safe-area-context-4.8.2.tgz#e6b3d8acf3c6afcb4b5db03a97f9c37df7668f65"
-  integrity sha512-ffUOv8BJQ6RqO3nLml5gxJ6ab3EestPiyWekxdzO/1MQ7NF8fW1Mzh1C5QE9yq573Xefnc7FuzGXjtesZGv7cQ==
+react-native-confirmation-code-field@^7.3.2:
+  version "7.3.2"
+  resolved "https://registry.npmmirror.com/react-native-confirmation-code-field/-/react-native-confirmation-code-field-7.3.2.tgz#f0ee9e72f632aa2ae4dade4a1664a7a484885ea8"
+  integrity sha512-uuJKxR+pQrXSx8lmRpekA+Hlle/nkoQKppS8jH7ApqY00+c11nCJg9kuFM0++vdbXg1rKm2P6jPZoSEJK2EaKw==
+
+react-native-popover-view@^5.1.7:
+  version "5.1.8"
+  resolved "https://registry.npmmirror.com/react-native-popover-view/-/react-native-popover-view-5.1.8.tgz#5c13815d56862cd59a0cdef548d892ce572a7956"
+  integrity sha512-kDH2liv/Xb8y0JCY25Ft2SiA5fJtVL4o7gk2dXyhXeNhjSEEss3Z3hZyeYMi4ctHimovWSBZz/CjfejNbUF1jA==
+  dependencies:
+    deprecated-react-native-prop-types "^2.3.0"
+    prop-types "^15.8.1"
+
+react-native-safe-area-context@^4.9.0:
+  version "4.9.0"
+  resolved "https://registry.npmmirror.com/react-native-safe-area-context/-/react-native-safe-area-context-4.9.0.tgz#21a570ca3594cb4259ba65f93befaa60d91bcbd0"
+  integrity sha512-/OJD9Pb8IURyvn+1tWTszWPJqsbZ4hyHBU9P0xhOmk7h5owSuqL0zkfagU0pg7Vh0G2NKQkaPpUKUMMCUMDh/w==
 
 react-native-screens@~3.29.0:
   version "3.29.0"
@@ -8465,6 +8598,14 @@ react-native-screens@~3.29.0:
   dependencies:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
+
+react-native-svg@^15.0.0:
+  version "15.0.0"
+  resolved "https://registry.npmmirror.com/react-native-svg/-/react-native-svg-15.0.0.tgz#3c700a33e97de6305e0fdc61dc036fc6b1bdaef2"
+  integrity sha512-ZUEXlzdU3cHjhOuc4BP7fbvabmz8yIuH4ocKSEr5V3P5skk2wnbEyZd3p7dzV9IoODgguCe7tcrNRGwr9pLRig==
+  dependencies:
+    css-select "^5.1.0"
+    css-tree "^1.1.3"
 
 react-native-web@~0.19.10:
   version "0.19.10"
@@ -8830,6 +8971,11 @@ rimraf@~2.6.2:
   integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
   dependencies:
     glob "^7.1.3"
+
+rn-placeholder@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.npmmirror.com/rn-placeholder/-/rn-placeholder-3.0.3.tgz#98f635b263ee003af2a984eed32d86ade308df35"
+  integrity sha512-EmVeLT8zDcTPilQZ2OHO/IiYUy2gApKGgbshDZBX0C4qxsn0cFATwgwOwyz8O7Vwg1Hul97Ci95hu7d6Js6XMQ==
 
 run-parallel@^1.1.9:
   version "1.2.0"
