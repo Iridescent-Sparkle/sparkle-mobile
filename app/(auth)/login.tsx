@@ -13,7 +13,14 @@ function Login() {
   const handleRegisterClick = () => {
     router.replace('/(auth)/register')
   }
-
+  const handleForgetPassword = () => {
+    router.push({
+      pathname: '/(auth)/change-password',
+      params: {
+        title: '修改密码',
+      },
+    })
+  }
   return (
     <View style={styles.container}>
       <Image style={styles.logo} src={`${IMAGE_PREFIX}/stars.png`}></Image>
@@ -33,7 +40,7 @@ function Login() {
         </View>
       </Form>
       <View style={styles.passwordTipWrapper}>
-        <Text style={styles.passwordTip}>忘记了密码？</Text>
+        <Text style={styles.passwordTip} onPress={handleForgetPassword}>忘记了密码？</Text>
       </View>
       <Button type="primary" style={styles.button}>登录</Button>
       <View style={styles.accountTipWrapper}>

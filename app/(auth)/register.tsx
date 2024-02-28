@@ -1,11 +1,10 @@
 import { Feather } from '@expo/vector-icons'
-import { Button, Field, Form, NumberInput, PasswordInput } from '@fruits-chain/react-native-xiaoshu'
+import { Button, Form, NumberInput, PasswordInput } from '@fruits-chain/react-native-xiaoshu'
 import { useRouter } from 'expo-router'
 import React from 'react'
-
 import { Text, View } from 'react-native'
 import { create, pxToDp } from '@/core/styleSheet'
-import VerifyCode from '@/components/VerifyCode'
+import VerifyCode from '@/core/components/VerifyCode'
 
 function Register() {
   const router = useRouter()

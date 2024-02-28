@@ -47,10 +47,11 @@ function RootLayoutNav() {
   return (
     <Provider theme={customTheme}>
       <ThemeProvider value={DefaultTheme}>
-        <Stack screenOptions={{ contentStyle: { backgroundColor: '#fff' } }}>
+        <Stack screenOptions={{ contentStyle: { backgroundColor: '#fff' }, headerShadowVisible: false, headerTitleStyle: { fontWeight: '700' } }}>
           <Stack.Screen name="(auth)/guide" options={{ headerShown: false }} />
           <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
           <Stack.Screen name="(auth)/register" options={{ headerShown: false }} />
+          <Stack.Screen name="(auth)/change-password" />
         </Stack>
       </ThemeProvider>
     </Provider>

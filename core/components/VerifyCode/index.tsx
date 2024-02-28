@@ -6,7 +6,7 @@ import useCountDown from './useCountDown'
 import { isPhone } from '@/core/tools/validator'
 import { c, create } from '@/core/styleSheet'
 import { useRefState } from '@/core/hooks/useRefState'
-import TouchView from '@/components/TouchView'
+import TouchView from '@/core/components/TouchView'
 
 type Props = TextInputProps & {
   tel: string
