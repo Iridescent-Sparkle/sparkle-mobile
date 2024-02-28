@@ -13,7 +13,7 @@ type Props = TextInputProps & {
   getVerifyCode: () => Promise<any>
 }
 
-function Code(props: Props) {
+function VerifyCode(props: Props) {
   const { getVerifyCode, tel } = props
   const [countDown, setCountDown, $countDown] = useCountDown()
   const [loading, setLoading, $loading] = useRefState(false)
@@ -86,4 +86,4 @@ const styles = create({
   },
 })
 
-export default Code
+export default VerifyCode

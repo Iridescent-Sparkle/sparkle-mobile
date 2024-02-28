@@ -1,6 +1,6 @@
 /** 主题色 */
 export const themeColor = {
-  /** 主题色: #0092ff */
+  /** 主题色: #6D63FD */
   primary: '#6D63FD',
   /** 边框颜色: #EFF1F6 */
   border: '#EFF1F6',

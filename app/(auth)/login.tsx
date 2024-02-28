@@ -1,26 +1,17 @@
-import React, { useState } from 'react'
-import { Image, Text, View } from 'react-native'
 import { Feather } from '@expo/vector-icons'
+import { Button, Form, NumberInput, PasswordInput } from '@fruits-chain/react-native-xiaoshu'
 import { useRouter } from 'expo-router'
-import { Button, Field, Form } from '@fruits-chain/react-native-xiaoshu'
+import React from 'react'
+import { Image, Text, View } from 'react-native'
+import { create, pxToDp } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
-import { create } from '@/core/styleSheet'
 
 function Login() {
   const router = useRouter()
   const [form] = Form.useForm()
-  const [showPassword, setShowPassword] = useState(false)
 
   const handleRegisterClick = () => {
     router.replace('/(auth)/register')
-  }
-
-  const handleShowPassword = () => {
-    setShowPassword(true)
-  }
-
-  const handleHiddenPassword = () => {
-    setShowPassword(false)
   }
 
   return (
@@ -31,18 +22,14 @@ function Login() {
         <View style={styles.formItem}>
           <Feather name="phone" size={24} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="phoneNumber">
-            <Field.TextInput style={styles.input}>
-            </Field.TextInput>
+            <NumberInput inputWidth={pxToDp(420)} />
           </Form.Item>
         </View>
         <View style={styles.formItem}>
           <Feather name="lock" size={24} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="password">
-            <Field.TextInput style={styles.input}></Field.TextInput>
+            <PasswordInput inputWidth={pxToDp(420)} />
           </Form.Item>
-          {showPassword
-            ? <Feather name="eye-off" size={24} color="#A9A9A9" onPress={handleHiddenPassword} />
-            : <Feather name="eye" size={24} color="#A9A9A9" onPress={handleShowPassword} />}
         </View>
       </Form>
       <View style={styles.passwordTipWrapper}>
@@ -82,9 +69,6 @@ const styles = create({
     borderWidth: 4,
     borderColor: '#F4F4F4',
     borderRadius: 28,
-  },
-  input: {
-    width: 460,
   },
   icon: {
     marginRight: 24,
