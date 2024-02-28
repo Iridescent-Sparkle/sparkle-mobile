@@ -1,17 +1,14 @@
 import React, { useState } from 'react'
-import { Image } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 import { useRouter } from 'expo-router'
-import { Text, View } from '@/components/Themed'
+import { Button, Field, Form } from '@fruits-chain/react-native-xiaoshu'
 import { IMAGE_PREFIX } from '@/constants'
 import { create } from '@/core/styleSheet'
-import Button from '@/components/Button'
-import Form from '@/components/Form'
-import Input from '@/components/Form/components/Input'
 
 function Login() {
   const router = useRouter()
-  const form = Form.useForm()
+  const [form] = Form.useForm()
   const [showPassword, setShowPassword] = useState(false)
 
   const handleRegisterClick = () => {
@@ -26,10 +23,6 @@ function Login() {
     setShowPassword(false)
   }
 
-  const onPasswordChange = (value: any) => {
-    console.log(value)
-  }
-
   return (
     <View style={styles.container}>
       <Image style={styles.logo} src={`${IMAGE_PREFIX}/stars.png`}></Image>
@@ -38,14 +31,14 @@ function Login() {
         <View style={styles.formItem}>
           <Feather name="phone" size={24} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="phoneNumber">
-            <Input style={styles.input}>
-            </Input>
+            <Field.TextInput style={styles.input}>
+            </Field.TextInput>
           </Form.Item>
         </View>
         <View style={styles.formItem}>
           <Feather name="lock" size={24} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="password">
-            <Input style={styles.input} onChange={onPasswordChange}></Input>
+            <Field.TextInput style={styles.input}></Field.TextInput>
           </Form.Item>
           {showPassword
             ? <Feather name="eye-off" size={24} color="#A9A9A9" onPress={handleHiddenPassword} />
@@ -55,11 +48,11 @@ function Login() {
       <View style={styles.passwordTipWrapper}>
         <Text style={styles.passwordTip}>忘记了密码？</Text>
       </View>
-      <Button title="登录" type="primary" style={styles.button}></Button>
+      <Button type="primary" style={styles.button}>登录</Button>
       <View style={styles.accountTipWrapper}>
         <Text style={styles.accountTip}>未拥有账户？</Text>
       </View>
-      <Button title="注册" style={styles.button} onPress={handleRegisterClick}></Button>
+      <Button style={styles.button} onPress={handleRegisterClick}>注册</Button>
     </View>
   )
 }

@@ -5,7 +5,7 @@ import useClick from '@/core/hooks/useClick'
 
 type Props = TouchableOpacityProps & {
   throttle?: number
-  onPress?: () => void | null
+  onPress?: () => void
 }
 
 function TouchView(props: Props) {

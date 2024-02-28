@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { useRefState } from '@/hooks/useRefState'
+import { useRefState } from '@/core/hooks/useRefState'
 
 interface ICountDownOptions {
   interval?: number

@@ -1,8 +1,8 @@
 import React from 'react'
-import { Image } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import { useRouter } from 'expo-router'
-import Button from '@/components/Button'
-import { Text, View } from '@/components/Themed'
+
+import { Button } from '@fruits-chain/react-native-xiaoshu'
 import { IMAGE_PREFIX } from '@/constants'
 import { create } from '@/core/styleSheet'
 
@@ -27,8 +27,8 @@ function Guide() {
         </Text>
       </View>
       <View style={styles.buttonWrapper}>
-        <Button title="注册" style={styles.button} onPress={handleRegisterClick}></Button>
-        <Button title="登录" style={styles.button} onPress={handleLoginClick}></Button>
+        <Button style={styles.button} onPress={handleRegisterClick}>注册</Button>
+        <Button style={styles.button} onPress={handleLoginClick}>登录</Button>
       </View>
     </View>
   )
