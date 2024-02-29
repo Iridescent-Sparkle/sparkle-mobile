@@ -15,7 +15,7 @@ function Login() {
   }
   const handleForgetPassword = () => {
     router.push({
-      pathname: '/(auth)/change-password',
+      pathname: '/(auth)/(change-password)/choose-way',
       params: {
         title: '修改密码',
       },
@@ -29,13 +29,13 @@ function Login() {
         <View style={styles.formItem}>
           <Feather name="phone" size={24} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="phoneNumber">
-            <NumberInput inputWidth={pxToDp(420)} />
+            <NumberInput inputWidth={pxToDp(420)} placeholder="请输入手机号" />
           </Form.Item>
         </View>
         <View style={styles.formItem}>
           <Feather name="lock" size={24} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="password">
-            <PasswordInput inputWidth={pxToDp(420)} />
+            <PasswordInput inputWidth={pxToDp(420)} placeholder="请输入密码" />
           </Form.Item>
         </View>
       </Form>

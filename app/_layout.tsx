@@ -5,6 +5,7 @@ import { useFonts } from 'expo-font'
 import { Stack, router } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
 import { useEffect } from 'react'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 import customTheme from '@/core/styleSheet/component'
 
 export { ErrorBoundary } from 'expo-router'
@@ -47,12 +48,16 @@ function RootLayoutNav() {
   return (
     <Provider theme={customTheme}>
       <ThemeProvider value={DefaultTheme}>
-        <Stack screenOptions={{ contentStyle: { backgroundColor: '#fff' }, headerShadowVisible: false, headerTitleStyle: { fontWeight: '700' } }}>
-          <Stack.Screen name="(auth)/guide" options={{ headerShown: false }} />
-          <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
-          <Stack.Screen name="(auth)/register" options={{ headerShown: false }} />
-          <Stack.Screen name="(auth)/change-password" />
-        </Stack>
+        <SafeAreaProvider>
+          <Stack screenOptions={{ contentStyle: { backgroundColor: '#fff' }, headerShadowVisible: false, headerTitleStyle: { fontWeight: '700' }, headerBackTitleVisible: false, headerTitleAlign: 'center' }}>
+            <Stack.Screen name="(auth)/guide" options={{ headerShown: false }} />
+            <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
+            <Stack.Screen name="(auth)/register" options={{ headerShown: false }} />
+            <Stack.Screen name="/(auth)/(change-password)/choose-way" />
+            <Stack.Screen name="/(auth)/(change-password)/verification-code" />
+          </Stack>
+        </SafeAreaProvider>
+
       </ThemeProvider>
     </Provider>
   )
