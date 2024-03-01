@@ -53,8 +53,8 @@ function RootLayoutNav() {
             <Stack.Screen name="(auth)/guide" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/register" options={{ headerShown: false }} />
-            <Stack.Screen name="/(auth)/(change-password)/choose-way" />
-            <Stack.Screen name="/(auth)/(change-password)/verification-code" />
+            <Stack.Screen name="/(auth)/(password)/reset-guide" />
+            <Stack.Screen name="/(auth)/(password)/verification-code" />
           </Stack>
         </SafeAreaProvider>
 

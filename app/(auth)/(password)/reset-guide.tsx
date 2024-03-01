@@ -18,7 +18,7 @@ function ChooseWay() {
   }, [])
 
   const handleContinueClick = () => {
-    router.push('/(auth)/login')
+    router.push('/(auth)/(password)/verification-code')
   }
 
   return (

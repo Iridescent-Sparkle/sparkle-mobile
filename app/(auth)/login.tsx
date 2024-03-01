@@ -13,14 +13,16 @@ function Login() {
   const handleRegisterClick = () => {
     router.replace('/(auth)/register')
   }
+
   const handleForgetPassword = () => {
     router.push({
-      pathname: '/(auth)/(change-password)/choose-way',
+      pathname: '/(auth)/(password)/reset-guide',
       params: {
         title: '修改密码',
       },
     })
   }
+
   return (
     <View style={styles.container}>
       <Image style={styles.logo} src={`${IMAGE_PREFIX}/stars.png`}></Image>

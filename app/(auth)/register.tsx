@@ -2,9 +2,9 @@ import { Feather } from '@expo/vector-icons'
 import { Button, Form, NumberInput, PasswordInput } from '@fruits-chain/react-native-xiaoshu'
 import { useRouter } from 'expo-router'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { ScrollView, Text, View } from 'react-native'
 import { create, pxToDp } from '@/core/styleSheet'
-import VerifyCode from '@/core/components/VerifyCode'
+import VerifyCode from '@/core/components/VerifyCodeButton'
 
 function Register() {
   const router = useRouter()
@@ -13,9 +13,11 @@ function Register() {
   const handleLoginClick = () => {
     router.replace('/(auth)/login')
   }
+
   const getVerifyCode = async () => {}
+
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.title}>创建一个免费的账户</Text>
       <Form form={form}>
         <View style={styles.formItem}>
@@ -52,7 +54,7 @@ function Register() {
         <Text style={styles.accountTip}>已拥有账户？</Text>
       </View>
       <Button style={styles.button} onPress={handleLoginClick}>登录</Button>
-    </View>
+    </ScrollView>
   )
 }
 
@@ -61,12 +63,12 @@ const styles = create({
     flex: 1,
     paddingTop: 80,
     paddingHorizontal: 60,
-    alignItems: 'center',
   },
   title: {
-    marginTop: 16,
+    marginTop: 48,
     fontSize: 40,
     fontWeight: '700',
+    textAlign: 'center',
   },
   logo: {
     width: 160,
