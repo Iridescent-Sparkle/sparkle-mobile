@@ -16,7 +16,7 @@ function VerificationCode() {
   }, [])
 
   const handleContinueClick = () => {
-    router.replace('/(auth)/login')
+    router.replace('/(auth)/(password)/reset-password')
   }
 
   return (
@@ -59,7 +59,7 @@ const styles = create({
   button: {
     width: '100%',
     borderRadius: 40,
-    marginBottom: 40,
+    marginBottom: 140,
   },
 })
 

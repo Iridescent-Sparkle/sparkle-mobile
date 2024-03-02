@@ -6,7 +6,7 @@ import { Image, ScrollView, Text, View } from 'react-native'
 import { create } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
 
-function ChooseWay() {
+function ResetGuide() {
   const router = useRouter()
   const navigation = useNavigation()
   const { title } = useLocalSearchParams<{ title: string }>()
@@ -23,7 +23,9 @@ function ChooseWay() {
 
   return (
     <ScrollView style={styles.container}>
-      <Image style={styles.banner} src={`${IMAGE_PREFIX}/my_password.png`}></Image>
+      <View style={styles.bannerWrapper}>
+        <Image style={styles.banner} src={`${IMAGE_PREFIX}/my_password.png`}></Image>
+      </View>
       <Text style={styles.title}>选择使用哪种联系方式来重置您的密码</Text>
       <View style={styles.card}>
         <View style={styles.circle}>
@@ -56,6 +58,10 @@ const styles = create({
   container: {
     flex: 1,
     paddingHorizontal: 40,
+  },
+  bannerWrapper: {
+    width: '100%',
+    alignItems: 'center',
   },
   banner: {
     width: 630,
@@ -98,4 +104,4 @@ const styles = create({
   },
 })
 
-export default ChooseWay
+export default ResetGuide
