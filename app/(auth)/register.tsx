@@ -16,13 +16,19 @@ function Register() {
 
   const getVerifyCode = async () => {}
 
+  const handleForgetPassword = () => {
+    router.push({
+      pathname: '/(auth)/(password)/forget-guide',
+    })
+  }
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>创建一个免费的账户</Text>
       <Form form={form}>
         <View style={styles.formItem}>
           <Feather name="phone" size={24} color="#A9A9A9" style={styles.icon} />
-          <Form.Item name="phoneNumber">
+          <Form.Item name="phone">
             <NumberInput style={styles.input} placeholder="请输入手机号" inputWidth={pxToDp(420)} />
           </Form.Item>
         </View>
@@ -40,14 +46,14 @@ function Register() {
         </View>
         <View style={styles.formItem}>
           <Feather name="code" size={24} color="#A9A9A9" style={styles.icon} />
-          <Form.Item name="phoneNumber">
+          <Form.Item name="phone">
             <NumberInput style={styles.input} placeholder="请输入验证码" inputWidth={pxToDp(400)} />
           </Form.Item>
           <VerifyCode tel="" getVerifyCode={getVerifyCode} />
         </View>
       </Form>
       <View style={styles.passwordTipWrapper}>
-        <Text style={styles.passwordTip}>忘记了密码？</Text>
+        <Text style={styles.passwordTip} onPress={handleForgetPassword}>忘记了密码？</Text>
       </View>
       <Button type="primary" style={styles.button}>注册</Button>
       <View style={styles.accountTipWrapper}>

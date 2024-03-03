@@ -9,11 +9,10 @@ import { IMAGE_PREFIX } from '@/constants'
 function ResetGuide() {
   const router = useRouter()
   const navigation = useNavigation()
-  const { title } = useLocalSearchParams<{ title: string }>()
 
   useEffect(() => {
     navigation.setOptions({
-      headerTitle: title,
+      headerTitle: '修改密码',
     })
   }, [])
 

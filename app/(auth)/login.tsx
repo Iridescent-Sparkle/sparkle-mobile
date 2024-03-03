@@ -30,7 +30,7 @@ function Login() {
       <Form form={form}>
         <View style={styles.formItem}>
           <Feather name="phone" size={24} color="#A9A9A9" style={styles.icon} />
-          <Form.Item name="phoneNumber">
+          <Form.Item name="phone">
             <NumberInput inputWidth={pxToDp(420)} placeholder="请输入手机号" />
           </Form.Item>
         </View>
