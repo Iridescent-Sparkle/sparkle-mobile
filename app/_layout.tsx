@@ -34,7 +34,10 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync()
-      router.replace('/(auth)/login')
+      router.replace('/user-change')
+      router.setParams({
+        type: 'recruit',
+      })
     }
   }, [loaded])
 
@@ -50,11 +53,12 @@ function RootLayoutNav() {
       <ThemeProvider value={DefaultTheme}>
         <SafeAreaProvider>
           <Stack screenOptions={{ contentStyle: { backgroundColor: '#fff' }, headerShadowVisible: false, headerTitleStyle: { fontWeight: '700' }, headerBackTitleVisible: false, headerTitleAlign: 'center' }}>
+            <Stack.Screen name="user-change" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/guide" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/register" options={{ headerShown: false }} />
-            <Stack.Screen name="/(auth)/(password)/reset-guide" />
-            <Stack.Screen name="/(auth)/(password)/verification-code" />
+            <Stack.Screen name="(auth)/(password)/reset-guide" />
+            <Stack.Screen name="(auth)/(password)/verification-code" />
           </Stack>
         </SafeAreaProvider>
 
