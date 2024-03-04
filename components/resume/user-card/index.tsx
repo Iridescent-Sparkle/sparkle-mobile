@@ -1,16 +1,14 @@
+import { Feather } from '@expo/vector-icons'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
-import { Feather } from '@expo/vector-icons'
-import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { IMAGE_PREFIX } from '@/constants'
 import { create } from '@/core/styleSheet'
+import { IMAGE_PREFIX } from '@/constants'
 
 function UserCard() {
-  const insets = useSafeAreaInsets()
   return (
-    <View style={[styles.container, { paddingTop: insets.top }]}>
+    <View style={styles.container}>
       <View style={styles.userWrapper}>
-        {/* <Image style={styles.avatar} src={`${IMAGE_PREFIX}/logo.png}`}></Image> */}
+        <Image style={styles.avatar} src={`${IMAGE_PREFIX}/logo.png}`}></Image>
         <View>
           <Text style={styles.tip}>早上好</Text>
           <Text style={styles.name}>Andrew</Text>
