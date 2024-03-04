@@ -1,4 +1,4 @@
-import { ImageStyle, TextStyle, ViewStyle } from 'react-native'
+import type { ImageStyle, TextStyle, ViewStyle } from 'react-native'
 
 type TypeStyle = ViewStyle | TextStyle | ImageStyle
 

@@ -35,7 +35,7 @@ export function pxToDp(uiElementPx: number) {
 }
 
 // 字体适配
-export const allowFontScaling = Platform.OS != 'ios'
+export const allowFontScaling = Platform.OS !== 'ios'
 
 // 不自动转rpx的
 const filterKeys = ['opacity', 'flex', 'zIndex']

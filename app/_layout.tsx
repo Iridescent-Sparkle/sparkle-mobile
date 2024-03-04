@@ -10,9 +10,9 @@ import customTheme from '@/core/styleSheet/component'
 
 export { ErrorBoundary } from 'expo-router'
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
+  initialRouteName: '(resume)/index',
 }
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -34,7 +34,6 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync()
-
       router.setParams({
         type: 'recruit',
       })
@@ -53,8 +52,8 @@ function RootLayoutNav() {
       <ThemeProvider value={DefaultTheme}>
         <SafeAreaProvider>
           <Stack screenOptions={{ contentStyle: { backgroundColor: '#fff' }, headerShadowVisible: false, headerTitleStyle: { fontWeight: '700' }, headerBackTitleVisible: false, headerTitleAlign: 'center' }}>
-            <Stack.Screen name="(recruit)" options={{ headerShown: false }} />
             <Stack.Screen name="(resume)" options={{ headerShown: false }} />
+            <Stack.Screen name="(recruit)" options={{ headerShown: false }} />
             <Stack.Screen name="user-change" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/guide" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />

@@ -1,14 +1,16 @@
 import React from 'react'
 import { Image, Text, View } from 'react-native'
 import { Feather } from '@expo/vector-icons'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { IMAGE_PREFIX } from '@/constants'
 import { create } from '@/core/styleSheet'
 
 function UserCard() {
+  const insets = useSafeAreaInsets()
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { paddingTop: insets.top }]}>
       <View style={styles.userWrapper}>
-        <Image style={styles.banner} src={`${IMAGE_PREFIX}/login.img}`}></Image>
+        {/* <Image style={styles.avatar} src={`${IMAGE_PREFIX}/logo.png}`}></Image> */}
         <View>
           <Text style={styles.tip}>早上好</Text>
           <Text style={styles.name}>Andrew</Text>
@@ -33,9 +35,9 @@ const styles = create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  banner: {
-    width: 630,
-    height: 540,
+  avatar: {
+    width: 80,
+    height: 80,
   },
   tip: {
     fontSize: 40,
@@ -47,9 +49,10 @@ const styles = create({
   },
   button: {
     width: 80,
+    height: 80,
     borderRadius: 40,
     borderWidth: 4,
-    borderColor: '#F2F3F3',
+    borderColor: '#F5F5F5',
     justifyContent: 'center',
     alignItems: 'center',
   },

@@ -1,10 +1,9 @@
 import { StyleSheet, View } from 'react-native'
-import UserCard from '../../components/resume/user-card/index'
 
 export default function RecruitHome() {
   return (
     <View style={styles.container}>
-      <UserCard></UserCard>
+
     </View>
   )
 }

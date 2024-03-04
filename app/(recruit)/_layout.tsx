@@ -1,37 +1,36 @@
-import { AntDesign, Entypo, Feather } from '@expo/vector-icons'
-import FontAwesome from '@expo/vector-icons/FontAwesome'
+import { AntDesign } from '@expo/vector-icons'
 import { Tabs } from 'expo-router'
 import React from 'react'
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ headerShown: false }}>
+    <Tabs screenOptions={{ headerShown: false, tabBarActiveTintColor: '#6D63FD' }}>
       <Tabs.Screen
         name="index"
         options={{
           title: '首页',
-          tabBarIcon: ({ focused }) => <FontAwesome name="list-alt" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="manage"
         options={{
           title: '管理招聘',
-          tabBarIcon: ({ focused }) => <Feather name="box" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <AntDesign name="inbox" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="chat"
         options={{
           title: '聊天',
-          tabBarIcon: ({ focused }) => <Entypo name="chat" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <AntDesign name="message1" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
         name="member"
         options={{
           title: '我的',
-          tabBarIcon: ({ focused }) => <AntDesign name="user" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <AntDesign name="user" size={24} color={color} />,
         }}
       />
     </Tabs>

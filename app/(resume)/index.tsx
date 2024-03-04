@@ -1,26 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { View } from 'react-native'
+import UserCard from '@/components/resume/user-card'
+import { create } from '@/core/styleSheet'
 
 export default function ResumeHome() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>ResumeHome</Text>
+      <UserCard />
     </View>
   )
 }
 
-const styles = StyleSheet.create({
+const styles = create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+    paddingHorizontal: 44,
+    backgroundColor: '#FFF',
   },
 })
