@@ -2,6 +2,7 @@ import { Search, Toast } from '@fruits-chain/react-native-xiaoshu'
 import React, { useState } from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { create } from '@/core/styleSheet'
+import { themeColor } from '@/core/styleSheet/themeColor'
 
 function SearchBar() {
   const [value, setValue] = useState('')
@@ -24,7 +25,7 @@ function SearchBar() {
       showSearchButton={false}
       autoSearch
       onSearchDebounceWait={800}
-      suffix={<Ionicons name="options-outline" size={24} color="#246BFD" />}
+      extra={<Ionicons name="options-outline" size={24} color={themeColor.primary} />}
     />
   )
 }
@@ -34,7 +35,7 @@ const styles = create({
     width: '100%',
     height: 96,
     borderRadius: 24,
-    paddingHorizontal: 16,
+    paddingRight: 16,
   },
 })
 
