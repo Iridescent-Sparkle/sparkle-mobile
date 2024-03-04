@@ -1,12 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
 
-export default function TabTwoScreen() {
+export default function RecruitMember() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-
-      <View style={styles.separator} />
-
+      <Text style={styles.title}>RecruitMember</Text>
     </View>
   )
 }

@@ -1,12 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import UserCard from '../../components/resume/user-card/index'
 
-export default function TabTwoScreen() {
+export default function RecruitHome() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-
-      <View style={styles.separator} />
-
+      <UserCard></UserCard>
     </View>
   )
 }
