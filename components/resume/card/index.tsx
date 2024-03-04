@@ -1,21 +1,23 @@
+import { Card } from '@fruits-chain/react-native-xiaoshu'
 import React from 'react'
-import { View } from 'react-native'
-import { create } from '@/core/styleSheet'
+import { Text } from 'react-native'
+import { create, s } from '@/core/styleSheet'
 
 function JobCard() {
   return (
-    <View style={styles.container}>
-
-    </View>
+    <Card style={styles.container}>
+      <Text>卡片无标题</Text>
+      <Text>Card content</Text>
+      <Text>Card content</Text>
+      <Text>Card content</Text>
+    </Card>
   )
 }
 
 const styles = create({
   container: {
     width: '100%',
-    height: 96,
-    borderRadius: 24,
-    paddingHorizontal: 16,
+    height: 300,
   },
 })
 
