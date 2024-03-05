@@ -3,6 +3,7 @@ import React from 'react'
 import { FlatList, View } from 'react-native'
 import { create, pxToDp } from '@/core/styleSheet'
 import { themeColor } from '@/core/styleSheet/themeColor'
+import LocationSalary from '@/components/search/location-salary'
 
 function FilterOptions() {
   return (
@@ -16,7 +17,7 @@ function FilterOptions() {
         <Tabs.TabPane key="6" tab="测试工程师" />
       </Tabs>
       <View>
-        <FlatList data={[]} renderItem={() => <></>} keyExtractor={item => item.id} />
+        <FlatList data={[{ id: '1' }]} renderItem={() => <LocationSalary></LocationSalary>} keyExtractor={item => item.id} />
       </View>
     </View>
   )
