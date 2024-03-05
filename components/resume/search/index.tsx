@@ -23,8 +23,6 @@ function SearchBar() {
       onSearch={onSearch}
       style={styles.search}
       showSearchButton={false}
-      autoSearch
-      onSearchDebounceWait={800}
       extra={<Ionicons name="options-outline" size={24} color={themeColor.primary} />}
     />
   )
