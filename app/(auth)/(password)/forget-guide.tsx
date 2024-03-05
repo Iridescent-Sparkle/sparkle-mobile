@@ -25,7 +25,7 @@ function ForgetGuide() {
       <Text style={styles.title}>现在重置你的密码</Text>
       <Form form={form}>
         <View style={styles.formItem}>
-          <Feather name="phone" size={24} color="#A9A9A9" style={styles.icon} />
+          <Feather name="phone" size={pxToDp(48)} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="phone">
             <NumberInput inputWidth={pxToDp(420)} placeholder="请输入手机号" />
           </Form.Item>

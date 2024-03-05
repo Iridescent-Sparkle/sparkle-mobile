@@ -62,7 +62,7 @@ function RootLayoutNav() {
             <Stack.Screen name="(auth)/(password)/reset-guide" />
             <Stack.Screen name="(auth)/(password)/verification-code" />
             <Stack.Screen name="(search)/search-result" options={{ headerShown: false }} />
-            <Stack.Screen name="(search)/filter-options" options={{ headerTitle: '选择筛选项', presentation: 'modal' }} />
+            <Stack.Screen name="(search)/filter-options" options={{ headerShown: false, presentation: 'modal' }} />
           </Stack>
         </SafeAreaProvider>
       </ThemeProvider>

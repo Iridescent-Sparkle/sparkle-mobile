@@ -5,15 +5,16 @@ import { themeColor } from '@/core/styleSheet/themeColor'
 import { create } from '@/core/styleSheet'
 
 interface Props {
+  title: string
   children: ReactNode
 }
 
 function BaseCard(props: Props) {
-  const { children } = props
+  const { title, children } = props
 
   return (
     <View style={styles.container}>
-      <Collapse title="标题11" titleTextStyle={styles.titleText} iconColor={themeColor.primary}>
+      <Collapse title={title} titleTextStyle={styles.titleText} iconColor={themeColor.primary}>
         {children}
       </Collapse>
     </View>

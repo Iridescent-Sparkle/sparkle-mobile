@@ -16,7 +16,7 @@ function FilterOptions() {
         <Tabs.TabPane key="5" tab="大数据工程师" />
         <Tabs.TabPane key="6" tab="测试工程师" />
       </Tabs>
-      <View>
+      <View style={styles.list}>
         <FlatList data={[{ id: '1' }]} renderItem={() => <LocationSalary></LocationSalary>} keyExtractor={item => item.id} />
       </View>
     </View>
@@ -32,6 +32,7 @@ const styles = create({
     width: '100%',
     height: 960,
     paddingTop: 32,
+    paddingHorizontal: 24,
   },
 })
 

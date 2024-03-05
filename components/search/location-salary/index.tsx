@@ -1,26 +1,31 @@
+import { MaterialIcons } from '@expo/vector-icons'
 import { Space } from '@fruits-chain/react-native-xiaoshu'
-import { View } from 'react-native'
-import Slider from '@react-native-community/slider'
-import { Feather } from '@expo/vector-icons'
+import { Text, View } from 'react-native'
+
+import Slider from 'react-native-a11y-slider'
 import BaseCard from '../base-card'
 import { create, pxToDp } from '@/core/styleSheet'
+import { themeColor } from '@/core/styleSheet/themeColor'
 
 function LocationSalary() {
   return (
-    <BaseCard>
+    <BaseCard title="位置和薪酬">
       <Space>
         <View style={styles.card}>
-          <Feather name="map-pin" size={pxToDp(32)} color="black" />
+          <MaterialIcons name="location-on" size={pxToDp(36)} color="black" />
+          <Text style={styles.text}>China</Text>
         </View>
         <Slider
-          style={{ width: 200, height: 40 }}
-          minimumValue={0}
-          maximumValue={1}
-          minimumTrackTintColor="#FFFFFF"
-          maximumTrackTintColor="#000000"
+          min={1}
+          max={100}
+          labelStyle={styles.label}
+          labelTextStyle={styles.labelText}
+          markerColor={themeColor.primary}
+          values={[10, 87]}
         />
-        <View>
-
+        <View style={[styles.card, styles.unit]}>
+          <Text style={styles.text}>per month</Text>
+          <MaterialIcons name="arrow-drop-down" size={pxToDp(48)} color="black" />
         </View>
       </Space>
     </BaseCard>
@@ -29,8 +34,29 @@ function LocationSalary() {
 
 const styles = create({
   card: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#FAFAFB',
+    borderRadius: 16,
+    height: 96,
+    paddingHorizontal: 32,
+  },
+  text: {
+    marginLeft: 32,
+    fontSize: 32,
+    color: '#363636',
+    fontWeight: '500',
+  },
+  unit: {
+    justifyContent: 'space-between',
+  },
+  label: {
+    backgroundColor: themeColor.primary,
     borderRadius: 8,
+
+  },
+  labelText: {
+    color: '#fff',
   },
 })
 
