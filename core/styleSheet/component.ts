@@ -4,5 +4,6 @@ const customTheme = {
   search_text_input_background_color: '#F5F5F5',
   search_padding_horizontal: '0',
   search_padding_vertical: '0',
+  tag_border_radius: 6,
 }
 export default customTheme
