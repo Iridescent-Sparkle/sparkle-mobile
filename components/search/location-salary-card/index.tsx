@@ -7,7 +7,7 @@ import BaseCard from '../base-card'
 import { create, pxToDp } from '@/core/styleSheet'
 import { themeColor } from '@/core/styleSheet/themeColor'
 
-function LocationSalary() {
+function LocationSalaryCard() {
   return (
     <BaseCard title="位置和薪酬">
       <Space>
@@ -60,4 +60,4 @@ const styles = create({
   },
 })
 
-export default LocationSalary
+export default LocationSalaryCard

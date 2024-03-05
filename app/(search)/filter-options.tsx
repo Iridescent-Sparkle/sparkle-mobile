@@ -3,7 +3,8 @@ import React from 'react'
 import { FlatList, View } from 'react-native'
 import { create, pxToDp } from '@/core/styleSheet'
 import { themeColor } from '@/core/styleSheet/themeColor'
-import LocationSalary from '@/components/search/location-salary'
+import LocationSalaryCard from '@/components/search/location-salary-card'
+import MultiSelectCard from '@/components/search/multi-select-card'
 
 function FilterOptions() {
   return (
@@ -17,7 +18,7 @@ function FilterOptions() {
         <Tabs.TabPane key="6" tab="测试工程师" />
       </Tabs>
       <View style={styles.list}>
-        <FlatList data={[{ id: '1' }]} renderItem={() => <LocationSalary></LocationSalary>} keyExtractor={item => item.id} />
+        <FlatList data={[{ id: '1' }]} renderItem={() => <MultiSelectCard title=""></MultiSelectCard>} keyExtractor={item => item.id} />
       </View>
     </View>
   )
