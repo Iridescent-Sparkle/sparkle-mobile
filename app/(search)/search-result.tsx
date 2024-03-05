@@ -3,7 +3,7 @@ import { FlatList, Text, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Image } from 'expo-image'
 import { Octicons } from '@expo/vector-icons'
-import { create } from '@/core/styleSheet'
+import { create, pxToDp } from '@/core/styleSheet'
 import SearchBar from '@/components/resume/search'
 import RecruitJobCard from '@/components/resume/card'
 import Visible from '@/core/components/Visible'
@@ -48,8 +48,8 @@ export default function SearchResult() {
       <Visible visible={true}>
         <View style={styles.header}>
           <Text style={styles.result}>3779个结果</Text>
-          {/* <Octicons name="sort-asc" size={24} color={themeColor.primary} /> */}
-          <Octicons name="sort-desc" size={24} color={themeColor.primary} />
+          {/* <Octicons name="sort-asc" size={pxToDp(48)} color={themeColor.primary} /> */}
+          <Octicons name="sort-desc" size={pxToDp(48)} color={themeColor.primary} />
         </View>
         <View style={styles.list}>
           {

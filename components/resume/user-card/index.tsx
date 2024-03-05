@@ -3,7 +3,7 @@ import React from 'react'
 import { Text, View } from 'react-native'
 import { Image } from 'expo-image'
 import { Space } from '@fruits-chain/react-native-xiaoshu'
-import { create } from '@/core/styleSheet'
+import { create, pxToDp } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
 
 function UserCard() {
@@ -17,7 +17,7 @@ function UserCard() {
         </View>
       </Space>
       <View style={styles.button}>
-        <Feather name="bell" size={24} color="black" />
+        <Feather name="bell" size={pxToDp(48)} color="black" />
       </View>
     </View>
   )

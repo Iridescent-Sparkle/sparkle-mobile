@@ -30,13 +30,13 @@ function ResetPassword() {
       <Text style={styles.title}>创建您的新密码</Text>
       <Form form={form}>
         <View style={styles.formItem}>
-          <Feather name="lock" size={24} color="#A9A9A9" style={styles.icon} />
+          <Feather name="lock" size={pxToDp(48)} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="password">
             <PasswordInput style={styles.input} placeholder="请输入密码" inputWidth={pxToDp(420)} />
           </Form.Item>
         </View>
         <View style={styles.formItem}>
-          <Feather name="lock" size={24} color="#A9A9A9" style={styles.icon} />
+          <Feather name="lock" size={pxToDp(48)} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="password">
             <PasswordInput style={styles.input} placeholder="确认你的密码" inputWidth={pxToDp(420)} />
           </Form.Item>

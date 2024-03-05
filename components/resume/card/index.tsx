@@ -19,8 +19,8 @@ function RecruitJobCard() {
             <Text style={styles.company}>Google LLC</Text>
           </Space>
         </Space>
-        {/* <Feather name="bookmark" size={24} color={themeColor.primary} /> */}
-        <FontAwesome name="bookmark" size={24} color={themeColor.primary} />
+        {/* <Feather name="bookmark" size={pxToDp(48)} color={themeColor.primary} /> */}
+        <FontAwesome name="bookmark" size={pxToDp(48)} color={themeColor.primary} />
       </Space>
       <Space style={styles.body}>
         <Text style={styles.address}>California, United States</Text>

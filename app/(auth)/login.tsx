@@ -30,13 +30,13 @@ function Login() {
       <Text style={styles.title}>请登录</Text>
       <Form form={form}>
         <View style={styles.formItem}>
-          <Feather name="phone" size={24} color="#A9A9A9" style={styles.icon} />
+          <Feather name="phone" size={pxToDp(48)} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="phone">
             <NumberInput inputWidth={pxToDp(420)} placeholder="请输入手机号" />
           </Form.Item>
         </View>
         <View style={styles.formItem}>
-          <Feather name="lock" size={24} color="#A9A9A9" style={styles.icon} />
+          <Feather name="lock" size={pxToDp(48)} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="password">
             <PasswordInput inputWidth={pxToDp(420)} placeholder="请输入密码" />
           </Form.Item>

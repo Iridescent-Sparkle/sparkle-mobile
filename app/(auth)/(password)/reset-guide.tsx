@@ -4,7 +4,7 @@ import { Image } from 'expo-image'
 import { useNavigation, useRouter } from 'expo-router'
 import React, { useEffect } from 'react'
 import { ScrollView, Text, View } from 'react-native'
-import { create } from '@/core/styleSheet'
+import { create, pxToDp } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
 
 function ResetGuide() {
@@ -29,7 +29,7 @@ function ResetGuide() {
       <Text style={styles.title}>选择使用哪种联系方式来重置您的密码</Text>
       <View style={styles.card}>
         <View style={styles.circle}>
-          <AntDesign name="message1" size={24} color="#3E7CFD" />
+          <AntDesign name="message1" size={pxToDp(48)} color="#3E7CFD" />
         </View>
         <Space>
           <Text style={styles.desc}>通过短信：</Text>
@@ -40,7 +40,7 @@ function ResetGuide() {
       </View>
       <View style={styles.card}>
         <View style={styles.circle}>
-          <MaterialCommunityIcons name="email-outline" size={24} color="#3E7CFD" />
+          <MaterialCommunityIcons name="email-outline" size={pxToDp(48)} color="#3E7CFD" />
         </View>
         <Space>
           <Text style={styles.desc}>通过邮箱：</Text>

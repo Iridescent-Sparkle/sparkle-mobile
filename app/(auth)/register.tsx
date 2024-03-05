@@ -27,25 +27,25 @@ function Register() {
       <Text style={styles.title}>创建一个免费的账户</Text>
       <Form form={form}>
         <View style={styles.formItem}>
-          <Feather name="phone" size={24} color="#A9A9A9" style={styles.icon} />
+          <Feather name="phone" size={pxToDp(48)} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="phone">
             <NumberInput style={styles.input} placeholder="请输入手机号" inputWidth={pxToDp(420)} />
           </Form.Item>
         </View>
         <View style={styles.formItem}>
-          <Feather name="lock" size={24} color="#A9A9A9" style={styles.icon} />
+          <Feather name="lock" size={pxToDp(48)} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="password">
             <PasswordInput style={styles.input} placeholder="请输入密码" inputWidth={pxToDp(420)} />
           </Form.Item>
         </View>
         <View style={styles.formItem}>
-          <Feather name="lock" size={24} color="#A9A9A9" style={styles.icon} />
+          <Feather name="lock" size={pxToDp(48)} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="password">
             <PasswordInput style={styles.input} placeholder="确认你的密码" inputWidth={pxToDp(420)} />
           </Form.Item>
         </View>
         <View style={styles.formItem}>
-          <Feather name="code" size={24} color="#A9A9A9" style={styles.icon} />
+          <Feather name="code" size={pxToDp(48)} color="#A9A9A9" style={styles.icon} />
           <Form.Item name="phone">
             <NumberInput style={styles.input} placeholder="请输入验证码" inputWidth={pxToDp(400)} />
           </Form.Item>
