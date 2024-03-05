@@ -2,7 +2,8 @@ import { Feather } from '@expo/vector-icons'
 import { Button, Form, PasswordInput } from '@fruits-chain/react-native-xiaoshu'
 import { useNavigation, useRouter } from 'expo-router'
 import React, { useEffect } from 'react'
-import { Image, ScrollView, Text, View } from 'react-native'
+import { ScrollView, Text, View } from 'react-native'
+import { Image } from 'expo-image'
 import { create, pxToDp } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
 
@@ -24,7 +25,7 @@ function ResetPassword() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.bannerWrapper}>
-        <Image style={styles.banner} src={`${IMAGE_PREFIX}/authentication.png`}></Image>
+        <Image style={styles.banner} source={`${IMAGE_PREFIX}/authentication.png`}></Image>
       </View>
       <Text style={styles.title}>创建您的新密码</Text>
       <Form form={form}>

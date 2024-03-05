@@ -1,7 +1,7 @@
 import React from 'react'
-import { Image, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import { useRouter } from 'expo-router'
-
+import { Image } from 'expo-image'
 import { Button } from '@fruits-chain/react-native-xiaoshu'
 import { IMAGE_PREFIX } from '@/constants'
 import { create } from '@/core/styleSheet'
@@ -19,7 +19,7 @@ function Guide() {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.banner} src={`${IMAGE_PREFIX}/mobile_login.png`}></Image>
+      <Image style={styles.banner} source={`${IMAGE_PREFIX}/mobile_login.png`}></Image>
       <View style={styles.titleWrapper}>
         <Text style={styles.title}>欢迎</Text>
         <Text style={styles.subTitle}>

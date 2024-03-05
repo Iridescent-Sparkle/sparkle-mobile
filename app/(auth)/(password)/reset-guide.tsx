@@ -1,8 +1,9 @@
 import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'
 import { Button, Space } from '@fruits-chain/react-native-xiaoshu'
-import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router'
+import { Image } from 'expo-image'
+import { useNavigation, useRouter } from 'expo-router'
 import React, { useEffect } from 'react'
-import { Image, ScrollView, Text, View } from 'react-native'
+import { ScrollView, Text, View } from 'react-native'
 import { create } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
 
@@ -23,7 +24,7 @@ function ResetGuide() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.bannerWrapper}>
-        <Image style={styles.banner} src={`${IMAGE_PREFIX}/my_password.png`}></Image>
+        <Image style={styles.banner} source={`${IMAGE_PREFIX}/my_password.png`}></Image>
       </View>
       <Text style={styles.title}>选择使用哪种联系方式来重置您的密码</Text>
       <View style={styles.card}>

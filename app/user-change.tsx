@@ -1,7 +1,8 @@
 import { Button } from '@fruits-chain/react-native-xiaoshu'
 import { useLocalSearchParams, useRouter } from 'expo-router'
 import React from 'react'
-import { Image, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
+import { Image } from 'expo-image'
 import { create } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
 
@@ -28,7 +29,7 @@ function UserChange() {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.banner} src={`${IMAGE_PREFIX}/${GUIDE_DATA[type].img}`}></Image>
+      <Image style={styles.banner} source={`${IMAGE_PREFIX}/${GUIDE_DATA[type].img}`}></Image>
       <Text style={styles.title}>{GUIDE_DATA[type].title}</Text>
       <Button style={styles.button} onPress={handleContinueClick}>{GUIDE_DATA[type].button}</Button>
     </View>

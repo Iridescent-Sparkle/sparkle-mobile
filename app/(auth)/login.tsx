@@ -2,7 +2,8 @@ import { Feather } from '@expo/vector-icons'
 import { Button, Form, NumberInput, PasswordInput } from '@fruits-chain/react-native-xiaoshu'
 import { useRouter } from 'expo-router'
 import React from 'react'
-import { Image, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
+import { Image } from 'expo-image'
 import { create, pxToDp } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
 
@@ -25,7 +26,7 @@ function Login() {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.logo} src={`${IMAGE_PREFIX}/stars.png`}></Image>
+      <Image style={styles.logo} source={`${IMAGE_PREFIX}/stars.png`}></Image>
       <Text style={styles.title}>请登录</Text>
       <Form form={form}>
         <View style={styles.formItem}>
