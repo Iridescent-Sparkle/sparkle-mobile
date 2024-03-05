@@ -34,6 +34,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync()
+      // router.push('/(search)/search-result')
       router.setParams({
         type: 'recruit',
       })
@@ -60,6 +61,7 @@ function RootLayoutNav() {
             <Stack.Screen name="(auth)/register" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/(password)/reset-guide" />
             <Stack.Screen name="(auth)/(password)/verification-code" />
+            <Stack.Screen name="(search)/search-result" options={{ headerShown: false }} />
           </Stack>
         </SafeAreaProvider>
       </ThemeProvider>

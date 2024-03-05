@@ -8,7 +8,7 @@ import { themeColor } from '@/core/styleSheet/themeColor'
 import { create } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
 
-function JobCard() {
+function RecruitJobCard() {
   return (
     <Card style={styles.container}>
       <Space direction="horizontal" style={styles.header}>
@@ -39,7 +39,7 @@ const styles = create({
     width: '100%',
     height: 384,
     padding: 32,
-    marginTop: 32,
+    marginBottom: 32,
     borderWidth: 4,
     borderColor: '#F0F1F1',
     borderRadius: 32,
@@ -80,4 +80,4 @@ const styles = create({
   },
 })
 
-export default JobCard
+export default RecruitJobCard
