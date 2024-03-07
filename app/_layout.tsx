@@ -12,7 +12,7 @@ export { ErrorBoundary } from 'expo-router'
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const unstable_settings = {
-  initialRouteName: '(resume)/index',
+  initialRouteName: '(genius-tab)/index',
 }
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -34,7 +34,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync()
-      router.push('/(resume)/detail')
+      router.push('/(genius-page)/detail')
       router.setParams({
         type: 'recruit',
       })
@@ -53,16 +53,17 @@ function RootLayoutNav() {
       <ThemeProvider value={DefaultTheme}>
         <SafeAreaProvider>
           <Stack screenOptions={{ contentStyle: { backgroundColor: '#fff' }, headerShadowVisible: false, headerTitleStyle: { fontWeight: '700' }, headerBackTitleVisible: false, headerTitleAlign: 'center' }}>
-            <Stack.Screen name="(resume)" options={{ headerShown: false }} />
-            <Stack.Screen name="(recruit)" options={{ headerShown: false }} />
-            <Stack.Screen name="user-change" options={{ headerShown: false }} />
+            <Stack.Screen name="(genius-tab)" options={{ headerShown: false }} />
+            <Stack.Screen name="(boss-tab)" options={{ headerShown: false }} />
+            <Stack.Screen name="(auth)/user-change)" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/guide" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/register" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/(password)/reset-guide" />
             <Stack.Screen name="(auth)/(password)/verification-code" />
-            <Stack.Screen name="(search)/search-result" options={{ headerShown: false }} />
-            <Stack.Screen name="(search)/filter-options" options={{ headerShown: false, presentation: 'modal' }} />
+            <Stack.Screen name="(genius-page)/detail" options={{ headerShown: false }} />
+            <Stack.Screen name="(genius-page)/search-result" options={{ headerShown: false }} />
+            <Stack.Screen name="(genius-page)/filter-options" options={{ headerShown: false, presentation: 'modal' }} />
           </Stack>
         </SafeAreaProvider>
       </ThemeProvider>
