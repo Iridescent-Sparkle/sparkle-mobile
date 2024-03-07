@@ -55,7 +55,7 @@ function RootLayoutNav() {
           <Stack screenOptions={{ contentStyle: { backgroundColor: '#fff' }, headerShadowVisible: false, headerTitleStyle: { fontWeight: '700' }, headerBackTitleVisible: false, headerTitleAlign: 'center' }}>
             <Stack.Screen name="(genius-tab)" options={{ headerShown: false }} />
             <Stack.Screen name="(boss-tab)" options={{ headerShown: false }} />
-            <Stack.Screen name="(auth)/user-change)" options={{ headerShown: false }} />
+            <Stack.Screen name="(auth)/user-change" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/guide" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/login" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/register" options={{ headerShown: false }} />

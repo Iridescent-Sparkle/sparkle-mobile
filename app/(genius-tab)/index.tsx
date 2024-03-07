@@ -1,9 +1,9 @@
 import { View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import UserCard from '@/components/recruit/recruit-user-card'
+import UserCard from '@/components/recruit/recruit-list/recruit-user-card'
 import { create } from '@/core/styleSheet'
-import SearchBar from '@/components/recruit/recruit-search-bar'
-import RecentJobList from '@/components/recruit/recent-job-list'
+import SearchBar from '@/components/recruit/recruit-list/recruit-search-bar'
+import RecentJobList from '@/components/recruit/recruit-list/recent-job-list'
 
 export default function GeniusHome() {
   const insets = useSafeAreaInsets()
