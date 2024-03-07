@@ -3,14 +3,13 @@ import { Button, Card, NavBar } from '@fruits-chain/react-native-xiaoshu'
 import React, { useRef } from 'react'
 import { FlatList, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import RecruitDescriptionCard from '@/components/recruit/recruit-detail/recruit-description-card'
+import RecruitDetailCard from '@/components/recruit/recruit-detail/recruit-detail-card'
 import MultiSelectCard from '@/components/recruit/recruit-search/multi-select-card'
 import FilterTabs from '@/components/recruit/recruit-search/recruit-filter-tabs'
-import SingleSelectCard from '@/components/recruit/recruit-search/single-select-card'
-import { educationList, employmentTypeList, experienceList, jobFunctionList, jobLevelList, workTypeList } from '@/constants'
+import { educationList, employmentTypeList, experienceList, jobFunctionList, jobLevelList } from '@/constants'
 import { create, pxToDp } from '@/core/styleSheet'
 import { themeColor } from '@/core/styleSheet/themeColor'
-import RecruitDetailCard from '@/components/recruit/recruit-detail/recruit-detail-card'
-import RecruitDescriptionCard from '@/components/recruit/recruit-detail/recruit-description-card'
 
 const listData = [
   {
@@ -20,8 +19,8 @@ const listData = [
   },
   {
     id: '2',
-    title: '工作类型',
-    component: <SingleSelectCard title="工作类型" data={workTypeList} />,
+    title: '最低资格',
+    component: <RecruitDescriptionCard title="最低资格" data={['2年以上UI/UX设计经验', '使用Figma、Sketch和Miro平台。', '具有数值设计的分析和转换能力', '冲刺到UI/UX。', '有相关B2C用户中心产品开发经验。']} />,
   },
   {
     id: '3',
