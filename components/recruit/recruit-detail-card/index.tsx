@@ -1,9 +1,7 @@
-import { FontAwesome } from '@expo/vector-icons'
 import { Card, Space, Tag } from '@fruits-chain/react-native-xiaoshu'
 import { Image } from 'expo-image'
 import React from 'react'
 import { Text } from 'react-native'
-import { pxToDp } from '../../../core/styleSheet/index'
 import { themeColor } from '@/core/styleSheet/themeColor'
 import { create } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
@@ -11,16 +9,10 @@ import { IMAGE_PREFIX } from '@/constants'
 function RecruitDetailCard() {
   return (
     <Card style={styles.container}>
-      <Space direction="horizontal" style={styles.header}>
-        <Space direction="horizontal" gap={pxToDp(32)}>
-          <Image style={styles.logo} source={`${IMAGE_PREFIX}/stars.png`} />
-          <Space gap={pxToDp(20)}>
-            <Text style={styles.title}>UI/UX Designer</Text>
-            <Text style={styles.company}>Google LLC</Text>
-          </Space>
-        </Space>
-        {/* <Feather name="bookmark" size={pxToDp(48)} color={themeColor.primary} /> */}
-        <FontAwesome name="bookmark" size={pxToDp(48)} color={themeColor.primary} />
+      <Space style={styles.header}>
+        <Image style={styles.logo} source={`${IMAGE_PREFIX}/stars.png`} />
+        <Text style={styles.title}>UI/UX Designer</Text>
+        <Text style={styles.company}>Google LLC</Text>
       </Space>
       <Space style={styles.body}>
         <Text style={styles.address}>California, United States</Text>
@@ -29,6 +21,7 @@ function RecruitDetailCard() {
           <Tag type="ghost" color="#979797">Full Time</Tag>
           <Tag type="ghost" color="#979797">Onsite</Tag>
         </Space>
+        <Text style={styles.deadline}>Posted 10 days ago,ends in 31 Dec. </Text>
       </Space>
     </Card>
   )
@@ -36,17 +29,14 @@ function RecruitDetailCard() {
 
 const styles = create({
   container: {
-    width: '100%',
-    height: 384,
     padding: 32,
-    marginBottom: 32,
     borderWidth: 4,
     borderColor: '#F0F1F1',
     borderRadius: 32,
   },
   header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    alignItems: 'center',
     borderBottomWidth: 2,
     borderColor: '#F0F1F1',
     paddingBottom: 16,
@@ -66,9 +56,10 @@ const styles = create({
     borderRadius: 24,
   },
   body: {
-    paddingLeft: 140,
-    paddingTop: 28,
+    paddingTop: 32,
     justifyContent: 'center',
+    alignItems: 'center',
+    gap: 8,
   },
   address: {
     fontSize: 32,
@@ -77,6 +68,10 @@ const styles = create({
   salary: {
     fontSize: 28,
     color: themeColor.primary,
+  },
+  deadline: {
+    color: '#616161',
+    fontSize: 24,
   },
 })
 

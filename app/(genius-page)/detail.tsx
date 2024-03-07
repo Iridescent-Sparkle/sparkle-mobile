@@ -10,6 +10,7 @@ import SingleSelectCard from '@/components/recruit/single-select-card'
 import { educationList, employmentTypeList, experienceList, jobFunctionList, jobLevelList, workTypeList } from '@/constants'
 import { create, pxToDp } from '@/core/styleSheet'
 import { themeColor } from '@/core/styleSheet/themeColor'
+import RecruitDetailCard from '@/components/recruit/recruit-detail-card'
 
 const listData = [
   {
@@ -54,13 +55,21 @@ function FilterOptions() {
   const listRef = useRef<FlatList>(null)
 
   return (
-    <View style={[styles.container, { paddingTop: insets.top }]}>
+    <View style={[styles.container, { paddingTop: insets.top, paddingBottom: insets.bottom }]}>
       <NavBar rightExtra={<FontAwesome name="bookmark" size={pxToDp(48)} color={themeColor.primary} />} rightStyle={styles.rightExtra} divider={false} />
-      <View>
-        <FilterTabs data={listData} />
-      </View>
       <View style={styles.list}>
-        <FlatList ref={listRef} data={listData} renderItem={itemItem => itemItem.item.component} keyExtractor={item => item.id} />
+        <FlatList
+          ListHeaderComponent={(
+            <View>
+              <RecruitDetailCard />
+              <FilterTabs data={listData} />
+            </View>
+          )}
+          ref={listRef}
+          data={listData}
+          renderItem={item => item.item.component}
+          keyExtractor={item => item.id}
+        />
       </View>
       <Card>
         <View style={styles.buttonWrapper}>
@@ -75,6 +84,7 @@ const styles = create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    paddingHorizontal: 20,
   },
   rightExtra: {
 
@@ -92,7 +102,6 @@ const styles = create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 20,
   },
   button: {
     width: 660,
