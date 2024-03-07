@@ -7,7 +7,6 @@ import LocationSalaryCard from '@/components/search/location-salary-card'
 import MultiSelectCard from '@/components/search/multi-select-card'
 import SingleSelectCard from '@/components/search/single-select-card'
 import { educationList, employmentTypeList, experienceList, jobFunctionList, jobLevelList, workTypeList } from '@/constants'
-import Form from '@/core/components/Form'
 import { create } from '@/core/styleSheet'
 
 const listData = [
@@ -49,25 +48,20 @@ const listData = [
 ]
 
 function FilterOptions() {
-  const form = Form.useForm()
-
   const insets = useSafeAreaInsets()
   const listRef = useRef<FlatList>(null)
 
   return (
-    <View style={[styles.container, { paddingBottom: insets.bottom }]}>
+    <View style={[styles.container, { paddingTop: insets.top }]}>
       <View>
         <FilterTabs data={listData} />
       </View>
       <View style={styles.list}>
-        <Form form={form}>
-          <FlatList ref={listRef} data={listData} renderItem={itemItem => itemItem.item.component} keyExtractor={item => item.id} />
-        </Form>
+        <FlatList ref={listRef} data={listData} renderItem={itemItem => itemItem.item.component} keyExtractor={item => item.id} />
       </View>
       <Card>
         <View style={styles.buttonWrapper}>
-          <Button type="ghost" style={styles.button}>重置</Button>
-          <Button style={styles.button}>确认</Button>
+          <Button style={styles.button}>投递</Button>
         </View>
       </Card>
     </View>
@@ -77,6 +71,7 @@ function FilterOptions() {
 const styles = create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
   },
   tabBar: {
     height: 114,
@@ -94,7 +89,7 @@ const styles = create({
     paddingHorizontal: 20,
   },
   button: {
-    width: 320,
+    width: 660,
     borderRadius: 40,
   },
 })

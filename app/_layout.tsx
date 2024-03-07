@@ -34,7 +34,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync()
-      router.push('/(search)/filter-options')
+      router.push('/(resume)/detail')
       router.setParams({
         type: 'recruit',
       })
