@@ -3,7 +3,6 @@ import { Button, Card, NavBar } from '@fruits-chain/react-native-xiaoshu'
 import React, { useRef } from 'react'
 import { FlatList, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import LocationSalaryCard from '@/components/recruit/recruit-search/location-salary-card'
 import MultiSelectCard from '@/components/recruit/recruit-search/multi-select-card'
 import FilterTabs from '@/components/recruit/recruit-search/recruit-filter-tabs'
 import SingleSelectCard from '@/components/recruit/recruit-search/single-select-card'
@@ -11,12 +10,13 @@ import { educationList, employmentTypeList, experienceList, jobFunctionList, job
 import { create, pxToDp } from '@/core/styleSheet'
 import { themeColor } from '@/core/styleSheet/themeColor'
 import RecruitDetailCard from '@/components/recruit/recruit-detail/recruit-detail-card'
+import RecruitDescriptionCard from '@/components/recruit/recruit-detail/recruit-description-card'
 
 const listData = [
   {
     id: '1',
-    title: '位置和薪酬',
-    component: <LocationSalaryCard />,
+    title: '工作描述',
+    component: <RecruitDescriptionCard title="工作描述" data={['能够运行设计冲刺交付最好的用户', '基于研究的经验。', '有领导团队的能力，能委派工作，有主动性。', '能够指导初级设计师制定战略', '如何收集特定的功能。', '能够对数据进行汇总和处理', '正在发生的决定。']} />,
   },
   {
     id: '2',
@@ -62,7 +62,7 @@ function FilterOptions() {
           ListHeaderComponent={(
             <View>
               <RecruitDetailCard />
-              <FilterTabs data={listData} />
+              <FilterTabs listRef={listRef} data={listData} />
             </View>
           )}
           ref={listRef}

@@ -10,12 +10,11 @@ interface Props {
     title: string
     component: React.JSX.Element
   }[]
+  listRef: React.RefObject<FlatList<any>>
 }
 
 function RecruitFilterTabs(props: Props) {
-  const { data } = props
-
-  const listRef = useRef<FlatList>(null)
+  const { data, listRef } = props
 
   const handleTabChange = (activeKey: string) => {
     listRef.current?.scrollToIndex({

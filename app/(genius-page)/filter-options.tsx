@@ -50,14 +50,13 @@ const listData = [
 
 function FilterOptions() {
   const form = Form.useForm()
-
   const insets = useSafeAreaInsets()
   const listRef = useRef<FlatList>(null)
 
   return (
     <View style={[styles.container, { paddingBottom: insets.bottom }]}>
       <View>
-        <FilterTabs data={listData} />
+        <FilterTabs listRef={listRef} data={listData} />
       </View>
       <View style={styles.list}>
         <Form form={form}>

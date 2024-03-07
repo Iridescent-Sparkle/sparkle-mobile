@@ -1,7 +1,6 @@
 import { MaterialIcons } from '@expo/vector-icons'
 import { Space } from '@fruits-chain/react-native-xiaoshu'
 import { Text, View } from 'react-native'
-
 import Slider from 'react-native-a11y-slider'
 import BaseCard from '../recruit-base-card'
 import { create, pxToDp } from '@/core/styleSheet'
