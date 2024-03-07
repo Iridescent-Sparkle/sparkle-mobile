@@ -14,7 +14,7 @@ function BaseCard(props: Props) {
 
   return (
     <View style={styles.container}>
-      <Collapse title={title} titleTextStyle={styles.titleText} iconColor={themeColor.primary}>
+      <Collapse defaultCollapse title={title} titleTextStyle={styles.titleText} iconColor={themeColor.primary}>
         {children}
       </Collapse>
     </View>
@@ -27,6 +27,7 @@ const styles = create({
     borderWidth: 4,
     borderColor: '#F1F1F1',
     overflow: 'hidden',
+    marginBottom: 32,
   },
   titleText: {
     fontSize: 36,

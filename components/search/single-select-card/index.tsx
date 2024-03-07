@@ -4,19 +4,29 @@ import { themeColor } from '@/core/styleSheet/themeColor'
 
 interface Props {
   title: string
+  data: {
+    label: string
+    key: string
+  }[]
 }
 
 function SingleSelectCard(props: Props) {
-  const { title } = props
+  const { title, data } = props
 
   return (
     <BaseCard title={title}>
       <Space>
-        <Checkbox
-          defaultValue
-          label="自定义 icon 边距"
-          activeColor={themeColor.primary}
-        />
+        {
+        !!data.length && (
+          data.map(item => (
+            <Checkbox
+              key={item.key}
+              label={item.label}
+              activeColor={themeColor.primary}
+            />
+          ))
+        )
+      }
       </Space>
     </BaseCard>
   )
