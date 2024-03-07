@@ -1,6 +1,6 @@
-import { Description, Space } from '@fruits-chain/react-native-xiaoshu'
-import { Text, View } from 'react-native'
 import { FontAwesome } from '@expo/vector-icons'
+import { Space } from '@fruits-chain/react-native-xiaoshu'
+import { Text, View } from 'react-native'
 import { create, pxToDp } from '@/core/styleSheet'
 
 interface Props {

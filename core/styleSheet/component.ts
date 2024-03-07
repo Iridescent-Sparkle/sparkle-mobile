@@ -9,5 +9,6 @@ const customTheme = {
   loading_text_font_size: 18,
   loading_icon_color: '#6D63FD',
   loading_icon_size: 70,
+  tag_primary_color: '#6D63FD',
 }
 export default customTheme

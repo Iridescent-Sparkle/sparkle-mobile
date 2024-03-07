@@ -10,6 +10,7 @@ import FilterTabs from '@/components/recruit/recruit-search/recruit-filter-tabs'
 import { educationList, employmentTypeList, experienceList, jobFunctionList, jobLevelList } from '@/constants'
 import { create, pxToDp } from '@/core/styleSheet'
 import { themeColor } from '@/core/styleSheet/themeColor'
+import RecruitTagCard from '@/components/recruit/recruit-detail/recruit-tags-card'
 
 const listData = [
   {
@@ -24,13 +25,13 @@ const listData = [
   },
   {
     id: '3',
-    title: '工作水平',
-    component: <MultiSelectCard title="工作水平" data={jobLevelList} />,
+    title: '福利',
+    component: <RecruitTagCard title="福利" data={['医疗/健康保险', '医疗、处方或视力计划', '绩效奖金', '带薪病假', '带薪休假', '交通津贴']} />,
   },
   {
     id: '4',
-    title: '就业类型',
-    component: <MultiSelectCard title="就业类型" data={employmentTypeList} />,
+    title: '所需技能',
+    component: <RecruitTagCard title="所需技能" data={['创造性思维', 'UI / UX设计', 'Figma', '平面设计', '网页设计', '布局']} />,
   },
   {
     id: '5',
