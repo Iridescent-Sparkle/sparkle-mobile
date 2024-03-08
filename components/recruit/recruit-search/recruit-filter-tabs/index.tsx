@@ -8,7 +8,7 @@ interface Props {
   data: {
     id: string
     title: string
-    component: React.JSX.Element
+    component?: React.JSX.Element
   }[]
   listRef: React.RefObject<FlatList<any>>
 }
