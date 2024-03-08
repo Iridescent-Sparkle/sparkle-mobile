@@ -11,6 +11,7 @@ import { educationList, employmentTypeList, experienceList, jobFunctionList, job
 import { create, pxToDp } from '@/core/styleSheet'
 import { themeColor } from '@/core/styleSheet/themeColor'
 import RecruitTagCard from '@/components/recruit/recruit-detail/recruit-tags-card'
+import RecruitSummaryCard from '@/components/recruit/recruit-detail/recruit-summary-card'
 
 const listData = [
   {
@@ -35,19 +36,25 @@ const listData = [
   },
   {
     id: '5',
-    title: '工作经验',
-    component: <MultiSelectCard title="工作经验" data={experienceList} />,
+    title: '工作总结',
+    component: <RecruitSummaryCard
+      title="工作经验"
+      data={[
+        { title: '经验', desc: '1 - 3年' },
+        { title: '教育', desc: '学士学位' },
+        { title: '工作水平', desc: '助理/主管' },
+        { title: '工作类型 ', desc: '资讯科技及软件' },
+        { title: '空缺', desc: '2' },
+        { title: '网站', desc: 'www.google.com' },
+      ]}
+               />,
   },
   {
     id: '6',
-    title: '教育层次',
-    component: <MultiSelectCard title="教育层次" data={educationList} />,
+    title: '关于',
+    component: <MultiSelectCard title="关于" data={educationList} />,
   },
-  {
-    id: '7',
-    title: '工作职能',
-    component: <MultiSelectCard title="工作职能" data={jobFunctionList} />,
-  },
+
 ]
 
 function FilterOptions() {
