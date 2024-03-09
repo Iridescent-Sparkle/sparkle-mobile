@@ -1,5 +1,5 @@
 import { Tabs } from '@fruits-chain/react-native-xiaoshu'
-import React, { useRef } from 'react'
+import type { RefObject } from 'react'
 import type { FlatList } from 'react-native'
 import { themeColor } from '@/core/styleSheet/themeColor'
 import { create, pxToDp } from '@/core/styleSheet'
@@ -8,9 +8,9 @@ interface Props {
   data: {
     id: string
     title: string
-    component?: React.JSX.Element
+    component?: JSX.Element
   }[]
-  listRef: React.RefObject<FlatList<any>>
+  listRef: RefObject<FlatList<any>>
 }
 
 function RecruitFilterTabs(props: Props) {

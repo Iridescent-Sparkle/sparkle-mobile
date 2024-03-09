@@ -1,7 +1,7 @@
 import { FontAwesome } from '@expo/vector-icons'
-import { Button, Card, NavBar, Popup, Space } from '@fruits-chain/react-native-xiaoshu'
+import { Button, Card, NavBar } from '@fruits-chain/react-native-xiaoshu'
 import React, { useRef, useState } from 'react'
-import { FlatList, Text, View } from 'react-native'
+import { FlatList, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import RecruitAboutCard from '@/components/recruit/recruit-detail/recruit-about-card'
 import RecruitDescriptionCard from '@/components/recruit/recruit-detail/recruit-description-card'
@@ -94,9 +94,9 @@ function FilterOptions() {
     setPopupVisible(true)
   }
 
-  const handlePopupClose = () => {
-    setPopupVisible(false)
-  }
+  // const handlePopupClose = () => {
+  //   setPopupVisible(false)
+  // }
 
   return (
     <View style={[styles.container, { paddingTop: insets.top, paddingBottom: insets.bottom }]}>
@@ -116,7 +116,7 @@ function FilterOptions() {
           <Button style={styles.button} onPress={handlePopupShow}>投递</Button>
         </View>
       </Card>
-      <Popup
+      {/* <Popup
         safeAreaInsetBottom
         visible={popupVisible}
         position="bottom"
@@ -128,7 +128,7 @@ function FilterOptions() {
           <Button style={styles.popupButton} onPress={handlePopupShow} type="hazy">投递</Button>
           <Button style={styles.popupButton} onPress={handlePopupShow}>投递</Button>
         </View>
-      </Popup>
+      </Popup> */}
     </View>
   )
 }

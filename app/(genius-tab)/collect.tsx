@@ -1,26 +1,26 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { View } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import UserCard from '@/components/recruit/recruit-list/recruit-user-card'
+import { create } from '@/core/styleSheet'
+import SearchBar from '@/components/recruit/recruit-list/recruit-search-bar'
+import RecentJobList from '@/components/recruit/recruit-list/recent-job-list'
 
-export default function GeniusCollect() {
+export default function GeniusHome() {
+  const insets = useSafeAreaInsets()
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>GeniusCollect</Text>
+    <View style={[styles.container, { paddingTop: insets.top }]}>
+      <UserCard />
+      <SearchBar />
+      <RecentJobList />
     </View>
   )
 }
 
-const styles = StyleSheet.create({
+const styles = create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+    paddingHorizontal: 44,
+    backgroundColor: '#FFF',
   },
 })
