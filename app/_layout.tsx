@@ -34,7 +34,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync()
-      router.push('/(genius-page)/deliver-detail')
+      // router.push('/(genius-page)/deliver-detail')
       router.setParams({
         type: 'recruit',
       })

@@ -1,12 +1,10 @@
+import React from 'react'
 import { FlatList, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import React, { useState } from 'react'
-import { Button, Popup } from '@fruits-chain/react-native-xiaoshu'
-import RecruitListCard from '@/components/recruit/recruit-list/recruit-list-card'
+import RecruitJobCard from '@/components/recruit/recruit-list/recruit-job-card'
 import RecruitListHeader from '@/components/recruit/recruit-list/recruit-job-header'
 import SearchBar from '@/components/recruit/recruit-list/recruit-search-bar'
 import { create } from '@/core/styleSheet'
-import RecruitJobCard from '@/components/recruit/recruit-list/recruit-job-card'
 
 const DATA = [
   {
@@ -31,7 +29,6 @@ export default function GeniusDeliver() {
       <RecruitListHeader title="我的投递" />
       <SearchBar />
       <FlatList style={styles.list} data={DATA} renderItem={() => <RecruitJobCard />} keyExtractor={item => item.id} />
-
     </View>
   )
 }
