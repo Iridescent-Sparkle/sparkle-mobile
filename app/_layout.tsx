@@ -34,7 +34,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync()
-      // router.push('/(genius-page)/detail')
+      router.push('/(genius-page)/deliver-detail')
       router.setParams({
         type: 'recruit',
       })
@@ -61,7 +61,8 @@ function RootLayoutNav() {
             <Stack.Screen name="(auth)/register" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)/(password)/reset-guide" />
             <Stack.Screen name="(auth)/(password)/verification-code" />
-            <Stack.Screen name="(genius-page)/detail" options={{ headerShown: false }} />
+            <Stack.Screen name="(genius-page)/job-detail" options={{ headerShown: false }} />
+            <Stack.Screen name="(genius-page)/deliver-detail" options={{ headerShown: false }} />
             <Stack.Screen name="(genius-page)/search-result" options={{ headerShown: false }} />
             <Stack.Screen name="(genius-page)/filter-options" options={{ headerShown: false, presentation: 'modal' }} />
           </Stack>

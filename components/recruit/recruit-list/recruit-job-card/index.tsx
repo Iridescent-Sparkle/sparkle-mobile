@@ -1,10 +1,9 @@
-import { Feather, FontAwesome, MaterialIcons } from '@expo/vector-icons'
+import { MaterialIcons } from '@expo/vector-icons'
 import { Card, Space, Tag } from '@fruits-chain/react-native-xiaoshu'
 import { Image } from 'expo-image'
-import React, { useState } from 'react'
+import React from 'react'
 import { Text } from 'react-native'
 import { pxToDp } from '../../../../core/styleSheet/index'
-import { themeColor } from '@/core/styleSheet/themeColor'
 import { create } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
 

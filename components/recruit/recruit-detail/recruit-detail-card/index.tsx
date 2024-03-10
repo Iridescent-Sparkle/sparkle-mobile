@@ -32,7 +32,7 @@ const styles = create({
     padding: 32,
     borderWidth: 4,
     borderColor: '#F0F1F1',
-    borderRadius: 32,
+    borderRadius: 48,
   },
   header: {
     justifyContent: 'center',
@@ -48,7 +48,7 @@ const styles = create({
   },
   company: {
     fontSize: 28,
-    color: '#636363',
+    color: themeColor.primary,
   },
   logo: {
     width: 108,

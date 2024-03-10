@@ -85,7 +85,7 @@ function listData(listRef: any) {
   ]
 }
 
-function FilterOptions() {
+function JobDetail() {
   const insets = useSafeAreaInsets()
   const listRef = useRef<FlatList>(null)
   const [popupVisible, setPopupVisible] = useState(false)
@@ -177,4 +177,4 @@ const styles = create({
   },
 })
 
-export default FilterOptions
+export default JobDetail
