@@ -5,12 +5,18 @@ import { Text, View } from 'react-native'
 import { create } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
 
-function RecruitListHeader() {
+interface Props {
+  title: string
+}
+function RecruitListHeader(props: Props) {
+  const { title } = props
   return (
     <View style={styles.container}>
       <Space direction="horizontal">
         <Image style={styles.logo} source={`${IMAGE_PREFIX}/stars.png`}></Image>
-        <Text style={styles.title}>收藏的工作</Text>
+        <Text style={styles.title}>
+          {title}
+        </Text>
       </Space>
       {/* <View style={styles.button}>
         <Feather name="bell" size={pxToDp(48)} color="black" />

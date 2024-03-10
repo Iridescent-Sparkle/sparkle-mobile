@@ -22,7 +22,7 @@ const DATA = [
   },
 ]
 
-export default function GeniusHome() {
+export default function GeniusCollect() {
   const insets = useSafeAreaInsets()
   const [popupVisible, setPopupVisible] = useState(false)
 
@@ -34,7 +34,7 @@ export default function GeniusHome() {
   }
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
-      <RecruitListHeader />
+      <RecruitListHeader title="收藏的工作" />
       <SearchBar />
       <FlatList style={styles.list} data={DATA} renderItem={() => <RecruitListCard handleCollectClick={handlePopupShow} />} keyExtractor={item => item.id} />
       <Popup
