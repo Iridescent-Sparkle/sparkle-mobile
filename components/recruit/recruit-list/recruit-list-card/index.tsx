@@ -1,14 +1,26 @@
-import { FontAwesome } from '@expo/vector-icons'
+import { Feather, FontAwesome } from '@expo/vector-icons'
 import { Card, Space, Tag } from '@fruits-chain/react-native-xiaoshu'
 import { Image } from 'expo-image'
-import React from 'react'
+import React, { useState } from 'react'
 import { Text } from 'react-native'
 import { pxToDp } from '../../../../core/styleSheet/index'
 import { themeColor } from '@/core/styleSheet/themeColor'
 import { create } from '@/core/styleSheet'
 import { IMAGE_PREFIX } from '@/constants'
 
-function RecruitListCard() {
+interface Props {
+  handleCollectClick: () => void
+}
+
+function RecruitListCard(props: Props) {
+  const { handleCollectClick } = props
+
+  const [bookmark, setBookmark] = useState(false)
+
+  const onCollectClick = () => {
+    setBookmark(!bookmark)
+    handleCollectClick && handleCollectClick()
+  }
   return (
     <Card style={styles.container}>
       <Space direction="horizontal" style={styles.header}>
@@ -19,8 +31,11 @@ function RecruitListCard() {
             <Text style={styles.company}>Google LLC</Text>
           </Space>
         </Space>
-        {/* <Feather name="bookmark" size={pxToDp(48)} color={themeColor.primary} /> */}
-        <FontAwesome name="bookmark" size={pxToDp(48)} color={themeColor.primary} />
+        {
+        bookmark
+          ? <FontAwesome suppressHighlighting name="bookmark-o" size={pxToDp(48)} color={themeColor.primary} onPress={onCollectClick} />
+          : <FontAwesome suppressHighlighting name="bookmark" size={pxToDp(48)} color={themeColor.primary} onPress={onCollectClick} />
+      }
       </Space>
       <Space style={styles.body}>
         <Text style={styles.address}>California, United States</Text>
